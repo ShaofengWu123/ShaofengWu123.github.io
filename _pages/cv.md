@@ -7,10 +7,10 @@ Shaofeng Wu(伍少枫) is an undergraduate student majoring in Computer Science 
 Engineering in the University of Texas at Austin under the supervision of Dr.Donglei Fan in 2019. He received his Bachelor degree of Natural Science in 2020. Driven by strong interest in programming and computer science topics, he continued his study in Computer Science in USTC as a Second-Bachelor student the same year.
 
 # Education
-* University of Science and Technology of China(USTC), China  
+* **University of Science and Technology of China(USTC), China**  
 Second Bachelor of Computer Science and Technology  				 
 Sept.2020-July.2022(expected)
-* University of Science and Technology of China(USTC), China  
+* **University of Science and Technology of China(USTC), China**  
 Bachelor of Natural Science in Material Physics                            
 Aug.2016-July.2020
 
