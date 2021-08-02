@@ -99,6 +99,9 @@ defaults:
     values:
       layout: single
       author_profile: false
+      toc: true
+      toc_label: "In this page"
+      toc_icon: "cog"
 
 category_archive:
   type: liquid

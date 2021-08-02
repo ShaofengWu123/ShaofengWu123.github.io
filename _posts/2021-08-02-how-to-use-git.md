@@ -94,7 +94,7 @@ Here I listed several cases that people, especially beginners, may frequently ec
 </ol>
 <strong>More quick tips</strong>: Always pull codes from remote repo before you get down to coding.
 
-## Q2: How to delete one or some files in one branch but still keep them in another branch?</h3>
+## Q2: How to delete one or some files in one branch but still keep them in another branch?
 <ol>
   <li><i><strong>rm [filename]</strong></i> in branchA.</li>
   <li><i><strong>git add -A</strong></i> to make sure all files are tracked in this branch.</li>
