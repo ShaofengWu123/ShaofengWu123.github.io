@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Shaofeng WU"
-  avatar : "/assets/images/Akane.jpg"
+  avatar : "/assets/images/akane.jpg"
   bio    : "Exercise every day!"
   links:
     - label: "GitHub"
