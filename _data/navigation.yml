@@ -1,9 +1,23 @@
 main:
   - title: "CV"
     url: /cv/
+  - title: "study"
+    url: /study/
   - title: "Posts"
     url: /posts/
   - title: "Categories"
     url: /categories/
   - title: "About"
     url: /about/
+
+study:
+  - title: Study Materials
+    children:
+      - title: "Data Structure/数据结构"
+        url: /study/data-structure/
+      - title: "Computer Network/计算机网络"
+        url: /study/computer-network/
+      - title: "Operating Systems/操作系统"
+        url: /study/os/
+      - title: "Computer Organization and Design/计算机组成原理"
+        url: /study/cod/

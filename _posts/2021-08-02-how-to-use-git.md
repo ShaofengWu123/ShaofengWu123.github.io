@@ -8,7 +8,8 @@ tags:
 ---
 # What is Git
 Git is a distributed open-source version control tool. Developers use Git to collaborate their work and control program versions.
-      
+![git](/assets/images/git.png)      
+
 # Git commands
 <p>Following is a list of frequently used Git commands and how to use them.</p>
       
