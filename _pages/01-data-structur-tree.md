@@ -1,5 +1,5 @@
 ---
-permalink: /study/data-structure/
+permalink: /study/data-structure/tree
 title: "Data-Structure"
 sidebar:
     nav: "ds" 
@@ -24,7 +24,7 @@ typedef struct _ThreadNode{
 
 ### 线索化
   即对二叉树进行一次遍历，同时将线索补充完整的过程。遍历思路(以中序为例)：  
-  对左子树调用遍历函数，节点内修改pre的rtag、rchild和自身的ltag、lchild，对右子树调用遍历函数
+  对左子树调用遍历函数，节点内修改pre的rtag、rchild和自身的ltag、lchild，修改时要注意一些特殊情况(例如前驱节点为NULL，说明当前节点是第一个、空树跳过遍历)，对右子树调用遍历函数
   #### 代码实现：
 ```c
 void CreateInThread(ThreadTree root){
@@ -55,4 +55,5 @@ void InThread(ThreadTree root){
 }
 ```
 
-### 线索二叉树遍历
+### 线索二叉树遍历  
+  线索二叉树遍历无需使用递归算法
