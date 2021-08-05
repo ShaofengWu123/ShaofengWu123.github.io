@@ -1,6 +1,6 @@
 ---
 permalink: /study/data-structure/tree
-title: "Data-Structure"
+title: "Tree"
 sidebar:
     nav: "ds" 
 ---

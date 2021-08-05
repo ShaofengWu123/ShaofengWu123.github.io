@@ -1,13 +1,13 @@
 ---
 permalink: /study/data-structure/stack
-title: "Data-Structure"
+title: "Stack"
 sidebar:
     nav: "ds" 
 ---
 # 基本定义
 仅限定在表尾或者说栈顶进行插入删除操作的特殊线性表，LIFO
 
-
+***
 # 数据结构实现
 
 ## 顺序实现：顺序栈
@@ -26,6 +26,7 @@ sidebar:
 
 ### 共享栈
 两个栈共享一块存储空间，栈顶对向生长，可以节省存储空间并防止上溢(top1==top0即停止增长，不会出现top超出存储空间边界的情况)
+<br>
 ![共享栈](/assets/images/ds/shared_stack.png)
 
 ## 链式实现：链式栈
@@ -41,10 +42,11 @@ typedef struct _linkstack{
 ```
 ### 特点
 栈不会发生栈满溢出，并且入栈出栈都在链表头部实现(有没有头节点取决于具体实现)
-
+***
 
 # 基本操作
 判断栈空，出栈，入栈，清空栈，销毁栈
+***
 
 
 # 栈的应用

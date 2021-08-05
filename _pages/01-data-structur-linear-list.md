@@ -1,6 +1,6 @@
 ---
 permalink: /study/data-structure/linear-list
-title: "Data-Structure"
+title: "Linear List"
 sidebar:
     nav: "ds" 
 ---
