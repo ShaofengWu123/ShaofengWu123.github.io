@@ -21,3 +21,30 @@ study:
         url: /study/os/
       - title: "Computer Organization and Design/计算机组成原理"
         url: /study/cod/
+
+ds:
+  - title: Content
+    children:
+      - title: "Linear List"
+        url: /study/data-structure/linear-list
+      - title: "Stack"
+        url: /study/data-structure/stack
+      - title: "Queue"
+        url: /study/data-structure/queue
+      - title: "String"
+        url: /study/data-structure/string
+      - title: "Array"
+        url: /study/data-structure/array
+      - title: "Special Matrix"
+        url: /study/data-structure/special-matrix
+      - title: "Lists"
+        url: /study/data-structure/lists
+      - title: "Tree"
+        url: /study/data-structure/tree
+      - title: "Graph"
+        url: /study/data-structure/graph
+      - title: "Search Table"
+        url: /study/data-structure/search-table
+      - title: "Sort"
+        url: /study/data-structure/sort
+  - title: Labs

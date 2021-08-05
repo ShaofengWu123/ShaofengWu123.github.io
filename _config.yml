@@ -91,6 +91,7 @@ defaults:
       toc: true
       toc_label: "In this page"
       toc_icon: "cog"
+      toc_sticky: ture
   # _pages
   - scope:
       path: "_pages"
@@ -101,6 +102,7 @@ defaults:
       toc: true
       toc_label: "In this page"
       toc_icon: "cog"
+      toc_sticky: ture
 
 category_archive:
   type: liquid
