@@ -1,5 +1,5 @@
 ---
-title: "How to use Git?"
+title: "How to Use Git?"
 categories:
   - Tools
 tags:
@@ -93,7 +93,7 @@ Here I listed several cases that people, especially beginners, may frequently ec
   <li><i><strong>git add remote origin [URL]</strong></i> to link local repo with remote repo. SSH is recommended to avoid typing username and password.</li>
   <li><i><strong>git pull origin main</strong></i> to pull codes from remote repo's main branch. Note that previous files in working section will not be removed.</li>
 </ol>
-<strong>More quick tips</strong>: Always pull codes from remote repo before you get down to coding.
+<p class="notice--info"><strong>More quick tips</strong>: Always pull codes from remote repo before you get down to coding.</p>
 
 ## Q2: How to delete one or some files in one branch but still keep them in another branch?
 <ol>
@@ -102,4 +102,4 @@ Here I listed several cases that people, especially beginners, may frequently ec
   <li><i><strong>git commit -am "comments"</strong></i> to commit changes to local repo branchA.</li>
   <li><i><strong>git checkout main</strong></i>, and you will find that deleted files will appear in this branch.</li>
 </ol>
-<strong>More quick tips</strong>: <i><strong>rm -rf [directory]</strong></i> to remove a whole directory (recursively and without asking).
+<p class="notice--info"><strong>More quick tips</strong>: <i><strong>rm -rf [directory]</strong></i> to remove a whole directory (recursively and without asking).</p>
