@@ -48,3 +48,11 @@ ds:
       - title: "Sort"
         url: /study/data-structure/sort
   - title: Labs
+  
+  cn:
+  - title: Content
+    children:
+    - title: "Computer Network Architecture"
+      url: /study/computer-network/arch
+    - title: "Transport Layer"
+      url: /study/computer-network/tansport-layer
