@@ -49,11 +49,11 @@ ds:
         url: /study/data-structure/sort
   - title: Labs
   
-  cn:
+cn:
   - title: Content
     children:
-    - title: "Computer Network Architecture"
-      url: /study/computer-network/arch
-    - title: "Transport Layer"
-      url: /study/computer-network/transport-layer
-      
+      - title: "Computer Network Architecture"
+        url: /study/computer-network/arch
+      - title: "Transport Layer"
+        url: /study/computer-network/transport-layer
+        
