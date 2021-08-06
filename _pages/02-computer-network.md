@@ -1,6 +1,8 @@
 ---
 permalink: /study/computer-network/
 title: "Computer Network"
+sidebar:
+    nav: "cn" 
 ---
 Computer Network mainly discuss devices, functions, protocals, interfaces, methods, algorithms and other important aspects of computer network. Based on a layered architecture, each layer has its own functions and provide services to upper layer through interface(SAP). And for each pair of layer entity, they adopt same protocals to achieve communication through a logical channel. Different methods and algorithms are used to achieve traffic control, routing and other functions in the network. Devices act as their physical support.
 
