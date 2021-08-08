@@ -6,7 +6,7 @@ sidebar:
 ---
 Computer Network mainly discuss devices, functions, protocals, interfaces, methods, algorithms and other important aspects of computer network. Based on a layered architecture, each layer has its own functions and provide services to upper layer through interface(SAP). And for each pair of layer entity, they adopt same protocals to achieve communication through a logical channel. Different methods and algorithms are used to achieve traffic control, routing and other functions in the network. Devices act as their physical support.
 
-Content outline: 
+# Content outline: 
 - Computer network models and structure
 - Physical layer
   - Baisc concepts: band width, rate of transmission, ...
@@ -84,3 +84,9 @@ Content outline:
     - Postal Office Protocal-Version 3(POP3)
     - Internet Mail Access Protocal(IMAP)
   - Hypertext Transfer Protocal(HTTP)
+
+# Links and References
+- [VLAN基本知识](https://zhuanlan.zhihu.com/p/35616289)
+- [NAT基本知识](https://zhuanlan.zhihu.com/p/49255466)
+- [IPv4与IPv6之间的转换](https://www.zhihu.com/question/19619799)
+- [数字签名](https://zhuanlan.zhihu.com/p/82128984)
