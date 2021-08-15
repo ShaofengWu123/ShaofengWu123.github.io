@@ -83,8 +83,8 @@ void InOrder(ThreaTree root){
 *** 
 ### 二叉排序树常见算法
 - <strong>查找算法</strong>：沿着二叉树尾递归即可
-<p class="notice--info">二叉排序树平均查找长度：
-1. 理想情况：(n+1)/n log<sub>2</sub>n +C = O(logn)
+<p class="notice--info">二叉排序树平均查找长度：<br>
+1. 理想情况：(n+1)/n log<sub>2</sub>n +C = O(logn)<br>
 2. 最坏情况：输入序列是有序的，导致二叉排序树变为有序单链表，此时查找长度为O(n)</p>
    
 - <strong>中序遍历算法</strong>：由二叉排序树的关键字大小特点可知，中序遍历序列能得到一个顺序有序序列。
@@ -144,9 +144,25 @@ void InOrder(ThreaTree root){
 - <strong>平衡二叉排序树的构造</strong>    
     方法：按给定序列构造二叉排序树，每增加一个节点就从增加节点位置向上检查平衡因子(每次调整的都是最小失去平衡子树)，对失衡节点执行平衡化旋转即可。
 
-- <strong>平衡二叉树的查找   
+- <strong>平衡二叉树的查找</strong>     
   查找算法与普通的二叉排序树相同
   <p class="notice--info">AVL平均查找长度为O(log<sub>2</sub>n)与普通二叉树相同，但是平衡二叉树对某固定数量的节点存在最大高度(即最多比较次数固定)</p>
 
 
 ## Huffman树
+### 基本概念   
+- 前缀码：不为彼此前缀的编码
+- 内部路径/外部路径
+- 带权路径长度
+- 哈夫曼树：带权路径长度最小的二叉树
+### 相关问题  
+- 包含n个权值的Huffman树总共多少节点？ 2n-1
+- 由权值列表画Huffman树 
+- 最佳判定树 
+<p class="notice--info"><strong>注意：</strong>最佳判定树不一定能套用Huffman算法来构建，例如成绩判定问题，因为if else语句一次只能判断大于还是小于等于，构建Huffman树必须使用相邻的成绩区间项相结合，但权值最小的两个区间不一定相邻</p>
+- 计算外部路径、带权路径
+
+### Huffman算法  
+构建Huffman树
+### Huffman树以及Huffman算法的代码实现   
+结构体数组

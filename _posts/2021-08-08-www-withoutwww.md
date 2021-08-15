@@ -8,7 +8,8 @@ tags:
 When browsering websites, you may happen to notice a difference among the domain names that you type into the browser: some of the domain names have "www" prefix while others do not.
 What's more, sometimes you can use these two kinds of domain names to visit the same website. For example, you can try links below to visit Baidu search engine website:  
 - [https://www.baidu.com/](https://www.baidu.com/) 
-- [https://baidu.com/](https://baidu.com/)
+- [https://baidu.com/](https://baidu.com/)  
+
 So why does some domain names have "www"? And what is the point in having a "www" prefix while you can use its alternative(without "www") to visit the same website? Questions will be answered below.
 
 # Basic concepts: IP address, domain name, URL, http and DNS
