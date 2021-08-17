@@ -13,10 +13,11 @@ sidebar:
   无向完全图有n(n-1)/2条边，有向完全图有n(n-1)条弧
 - 子图
 - 连通性、连通图、连通分量：  
-  极大连通子图称为连通分量，一般是唯一的(对于连通图来说就是本身)，但是也存在不唯一的情况，例如非连通图可以有两个完全相同的连通分量
+  极大连通子图称为连通分量，一般是唯一的(对于连通图来说就是本身)，但是也存在不唯一的情况，例如非连通图可以有两个完全相同的连通分量。
 - 强连通性、强连通分量
 - 生成树、生成森林：  
   生成树其实是包含所有顶点的极小连通子图
+<p class="notice--info">极大连通子图和极小连通子图的意义为边极大、极小，连通图的极大连通子图是其本身，极小连通子图一般只对连通图而言</p>
 - 度、出/入度
 - 稠密图、稀疏图：e < vlogv时
 - 路径、路径长度、回路(环)
@@ -53,9 +54,10 @@ typedef struct _adjgraph{
 
 ## 2.2.图的邻接表
 图的邻接表即顶点数组加边链表  
-![图的邻接表](/assets/images/ds/图的邻接表.png)
-                  代码实现：适合稀疏图
-                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#define MAXSIZE 100
+![图的邻接表](/assets/images/ds/图的邻接表.png)  
+代码实现：适合稀疏图
+```c
+#define MAXSIZE 100
 typedef struct _arcnode{
   ArcElemtype w;
   InfoElemtype * info;
@@ -72,12 +74,17 @@ typedef struct _algraph{
   GraphType kind;
   int vexnum, arcnum;
   Vexnode vex[MAXSIZE];
-}ALGraph;</code></pre></div></div>
-                </li>
-                <li>有向图的十字链表：出边表+入边表，边节点合并，增加节点内容即可实现 <br>绘制时先绘制出边表（邻接表），再补充入边表
-                  <img src="有向图的十字链表.png">
-                  代码实现：与邻接表相似
-                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#define MAXSIZE 100
+}ALGraph;
+```
+
+### 有向图的十字链表
+出边表+入边表，边节点合并，增加节点内容即可实现；绘制时先绘制出边表（邻接表），再补充入边表。
+![有向图的十字链表](/assets/images/ds/有向图的十字链表.png) 
+<p class="notice--info">有向图的十字链表和稀疏矩阵的十字链表本质上是一样的，前者节点的出边域和入边域分别构成了后者的行、列数组，前者的边节点对应后者的矩阵元素</p>
+
+代码实现：与邻接表相似
+```c
+#define MAXSIZE 100
 typedef struct _arcnode{
   ArcElemtype w;
   InfoElemtype * info;
@@ -95,12 +102,15 @@ typedef struct _olgraph{
   VexNode vex[MAXSIZE];
   int vexnum,arcnum;
 }OLGraph;
-</code></pre></div></div>
-                </li>
-                <li>无向图的邻接多重表：边节点合并的邻接表，增加边节点的内容即可
-                  <img src="无向图的邻接多重表.png">
-                  代码实现：与邻接表相似，适合于注重边的遍历、访问、搜索的算法，原因是邻接表访问过需要在两个边节点上做标记，非常麻烦，而邻接多重表只需要在一处标记。
-                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#define MAXSIZE 100
+```
+
+### 无向图的邻接多重表
+边节点合并的邻接表，增加边节点的内容即可
+![无向图的邻接多重表](/assets/images/ds/无向图的邻接多重表.png) 
+
+代码实现：与邻接表相似，适合于注重边的遍历、访问、搜索的算法，原因是邻接表访问过需要在两个边节点上做标记，非常麻烦，而邻接多重表只需要在一处标记。
+```c
+#define MAXSIZE 100
 typedef struct _arcnode{
   int mark;//访问标记，标记是否被访问
   int iadjvex;//一个端点 
@@ -121,10 +131,7 @@ typedef struct _amlgraph{
   VexNode vex[MAXSIZE];
   int arcnum, vexnum;
 }AMLGraph;
-</code></pre></div></div>
-                </li>
-                </ul></div>
-              </li>
+```
 
 
 # 3.图的搜索和遍历
@@ -163,6 +170,9 @@ typedef struct _amlgraph{
     </ul>
   </li>
 </ul>
+<p class="notice--info"><strong>思考</strong>：<br>1.如果拓扑序列是有序的(指节点编号有序)，那么图的邻接矩阵是什么样的？<br>答：是上/下三角的
+<br>2.什么样的点不能出现在拓扑序列中？<br>答：既是起点又是终点的节点
+</p>
 
 ## 4.3.AOE网络
 <ul>
