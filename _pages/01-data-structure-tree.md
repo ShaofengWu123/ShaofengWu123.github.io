@@ -149,7 +149,7 @@ void InOrder(ThreaTree root){
   <p class="notice--info">AVL平均查找长度为O(log<sub>2</sub>n)与普通二叉树相同，但是平衡二叉树对某固定数量的节点存在最大高度(即最多比较次数固定)</p>
 
 
-## Huffman树
+## 5.3.Huffman树
 ### 基本概念   
 - 前缀码：不为彼此前缀的编码
 - 内部路径/外部路径
@@ -166,3 +166,6 @@ void InOrder(ThreaTree root){
 构建Huffman树
 ### Huffman树以及Huffman算法的代码实现   
 结构体数组
+
+## 5.4.B-树
+## 5.5.B+树

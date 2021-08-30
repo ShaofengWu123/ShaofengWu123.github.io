@@ -61,9 +61,130 @@ sidebar:
 
 
 ## 各种内部排序算法的比较
-| 排序算法     | 分类        | 平均时间复杂度 | 最好时间复杂度 | 最坏时间复杂度 | 稳定性        | 辅助空间     | 适合场景    | 缺点/备注 |
-| ----------- | ----------- | ------------- | -----------   | -----------   | ----------- | ----------- | ----------- | ----------- |
 
+<table>
+<thead>
+  <tr>
+    <th style="text-align: left">排序算法</th>
+    <th style="text-align: left">插入排序</th>
+    <th style="text-align: left">折半插入排序</th>
+    <th style="text-align: left">希尔排序</th>
+    <th style="text-align: left">冒泡排序</th>
+    <th style="text-align: left">快速排序</th>
+    <th style="text-align: left">选择排序</th>
+    <th style="text-align: left">树型选择排序</th>
+    <th style="text-align: left">堆排序</th>
+    <th style="text-align: left">归并排序</th>
+    <th style="text-align: left">基数排序</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td style="text-align: left">分类</td>
+    <td style="text-align: left">插入排序</td>
+    <td style="text-align: left">插入排序</td>
+    <td style="text-align: left">插入排序</td>
+    <td style="text-align: left">冒泡排序</td>
+    <td style="text-align: left">冒泡排序</td>
+    <td style="text-align: left">选择排序</td>
+    <td style="text-align: left">选择排序</td>
+    <td style="text-align: left">选择排序</td>
+    <td style="text-align: left">归并排序</td>
+    <td style="text-align: left">基数排序</td>
+  </tr>
+  <tr>
+    <td style="text-align: left">平均时间复杂度</td>
+    <td style="text-align: left">O(n<sup>2</sup>)比较和移动</td>
+    <td style="text-align: left">O(n<sup>2</sup>)移动(不变，该移动多少移动多少)，O(logn)比较</td>
+    <td style="text-align: left">O(n<sup>k</sup>)，1&ltk&lt2，取决于增量序列选取</td>
+    <td style="text-align: left">O(n<sup>2</sup>)比较和交换</td>
+    <td style="text-align: left">O(nlogn)，并且是同数量级排序算法中最快的</td>
+    <td style="text-align: left">O(n<sup>2</sup>)</td>
+    <td style="text-align: left">O(nlogn)</td>
+    <td style="text-align: left">O(nlogn)</td>
+    <td style="text-align: left">O(nlogn)</td>
+    <td style="text-align: left">O(d(n+rd))</td>
+  </tr>
+  <tr>
+    <td style="text-align: left">最好时间复杂度</td>
+    <td style="text-align: left">正序序列：O(n)比较，无数据移动</td>
+    <td style="text-align: left">正序序列：O(logn)比较，无数据移动</td>
+    <td style="text-align: left">N/A</td>
+    <td style="text-align: left">正序序列：O(n)比较，无数据交换</td>
+    <td style="text-align: left">O(nlogn)</td>
+    <td style="text-align: left">O(n<sup>2</sup>)，正序序列数据交换变少，但是比较次数不变</td>
+    <td style="text-align: left">O(nlogn)，和平均相同，永远是一棵均衡的二叉树</td>
+    <td style="text-align: left">O(nlogn)</td>
+    <td style="text-align: left">O(nlogn)</td>
+    <td style="text-align: left">O(d(n+rd))</td>
+  </tr>
+  <tr>
+    <td style="text-align: left">最坏时间复杂度</td>
+    <td style="text-align: left">逆序序列：O(n<sup>2</sup>)比较和移动</td>
+    <td style="text-align: left">逆序序列：O(n<sup>2</sup>)移动，O(logn)比较</td>
+    <td style="text-align: left">N/A</td>
+    <td style="text-align: left">逆序序列：O(n<sup>2</sup>)比较和交换</td>
+    <td style="text-align: left">正序序列/基本有序：<strong>O(n<sup>2</sup>)，退化成冒泡排序</strong></td>
+    <td style="text-align: left">O(n<sup>2</sup>)，比较次数和初始状态无关</td>
+    <td style="text-align: left">O(nlogn)，和平均相同，永远是一棵均衡的二叉树</td>
+    <td style="text-align: left"><strong>O(nlogn)</strong></td>
+    <td style="text-align: left">O(nlogn)</td>
+    <td style="text-align: left">O(d(n+rd))</td>
+  </tr>
+  <tr>
+    <td style="text-align: left">稳定性</td>
+    <td style="text-align: left">稳定</td>
+    <td style="text-align: left">稳定</td>
+    <td style="text-align: left">不稳定，例如两相同元素在某增量对应不同序列里</td>
+    <td style="text-align: left">稳定</td>
+    <td style="text-align: left">不稳定，例如高位某小元素和支点交换，和支点相等元素没动</td>
+    <td style="text-align: left">稳定</td>
+    <td style="text-align: left">稳定</td>
+    <td style="text-align: left">不稳定</td>
+    <td style="text-align: left">稳定</td>
+    <td style="text-align: left">稳定</td>
+  </tr>
+  <tr>
+    <td style="text-align: left">辅助空间</td>
+    <td style="text-align: left">O(1)</td>
+    <td style="text-align: left">O(1)</td>
+    <td style="text-align: left">O(1)</td>
+    <td style="text-align: left">O(1)</td>
+    <td style="text-align: left">O(logn)</td>
+    <td style="text-align: left">O(1)</td>
+    <td style="text-align: left">O(n)，即一棵二叉树</td>
+    <td style="text-align: left">O(1)</td>
+    <td style="text-align: left">O(n)，存储归并结果</td>
+    <td style="text-align: left">O(rd+n)，队列指针和各元素的指针</td>
+  </tr>
+  <tr>
+    <td style="text-align: left">适合场景/优点</td>
+    <td style="text-align: left">n很小时、基本有序时的简便排序方法</td>
+    <td style="text-align: left">相比简单插入减少了一些比较次数</td>
+    <td style="text-align: left">增量移动从而构造基本有序序列，最后一步插入排序更快</td>
+    <td style="text-align: left">简单</td>
+    <td style="text-align: left">平均最快</td>
+    <td style="text-align: left">简单</td>
+    <td style="text-align: left">相比选择排序利用了前一轮的比较结果</td>
+    <td style="text-align: left">相比选择排序利用了前一轮的比较结果，并且最差时间复杂度优于快速排序</td>
+    <td style="text-align: left">与堆排序和快排相比是稳定的，并且n较大时比堆排序快一些</td>
+    <td style="text-align: left">适合n较大且关键字较小的场景，并且基于分配收集而不是比较移动</td>
+  </tr>
+  <tr>
+    <td style="text-align: left">备注/缺点</td>
+    <td style="text-align: left">N/A</td>
+    <td style="text-align: left">N/A</td>
+    <td style="text-align: left">N/A</td>
+    <td style="text-align: left">N/A</td>
+    <td style="text-align: left">尾递归改进栈深度从最差O(n)为O(logn)</td>
+    <td style="text-align: left">无论如何比较次数都是O(n<sup>2</sup>)</td>
+    <td style="text-align: left">辅助存储空间需求大、INF重复比较</td>
+    <td style="text-align: left">N/A</td>
+    <td style="text-align: left">辅助空间要求大，并且递归形式需要栈空间</td>
+    <td style="text-align: left">N/A</td>
+  </tr>
+</tbody>
+</table>
 
 
 
