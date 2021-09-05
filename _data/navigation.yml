@@ -21,6 +21,8 @@ study:
         url: /study/os/
       - title: "Computer Organization and Design/计算机组成原理"
         url: /study/cod/
+      - title: "Foundations of Algorithms/算法基础"
+        url: /study/alg/
 
 ds:
   - title: Content
@@ -53,7 +55,41 @@ cn:
   - title: Content
     children:
       - title: "Computer Network Architecture"
-        url: /study/computer-network/arch
+        url: /study/os/arch
       - title: "Transport Layer"
         url: /study/computer-network/transport-layer
+
+os:
+  - title: Content
+    children:
+      - title: "Introduction"
+        url: /study/os/intro
+      - title: "Process"
+        url: /study/os/process
+      - title: "Thread"
+        url: /study/os/thread
+      - title: "Inter-process Communication and Synchronization"
+        url: /study/os/ipc&syn
+      - title: "Process Scheduling"
+        url: /study/os/schedule
+      - title: "Memory Management"
+        url: /study/os/memory
+      - title: "Mass Storage"
+        url: /study/os/mass-storage
+      - title: "File System"
+        url: /study/os/fs
+      - title: "FAT"
+        url: /study/os/fat
+      - title: "EXT"
+        url: /study/os/ext
+      - title: "I/O System"
+        url: /study/os/io
+
+
+alg:
+  - title: Content
+    children:
+      - title: "Sort"
+        url: /study/alg/sort
+
         
