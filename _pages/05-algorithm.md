@@ -1,5 +1,5 @@
 ---
-permalink: /study/alg
+permalink: /study/alg/
 title: "Foundations of Algorithms"
 sidebar:
   nav: "alg"

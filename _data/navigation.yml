@@ -24,7 +24,7 @@ study:
       - title: "Foundations of Algorithms/算法基础"
         url: /study/alg/
       - title: "Pinciples of Compiler/编译原理"
-        url: /study/com/
+        url: /study/comipler/
 
 ds:
   - title: Content
