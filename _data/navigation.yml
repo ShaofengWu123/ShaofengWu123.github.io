@@ -23,6 +23,8 @@ study:
         url: /study/cod/
       - title: "Foundations of Algorithms/算法基础"
         url: /study/alg/
+      - title: "Pinciples of Compiler/编译原理"
+        url: /study/com/
 
 ds:
   - title: Content
@@ -89,7 +91,17 @@ os:
 alg:
   - title: Content
     children:
+      - title: "Concept of Algorithms"
+        url: /study/alg/con
       - title: "Sort"
         url: /study/alg/sort
+
+com:
+  - title: Content
+    children:
+      - title: "Introduction"
+        url: /study/com/intro
+      - title: "Lexical Analysis"
+        url: /study/com/lex
 
         
