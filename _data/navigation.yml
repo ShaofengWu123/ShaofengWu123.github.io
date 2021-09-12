@@ -92,9 +92,11 @@ alg:
   - title: Content
     children:
       - title: "Concept of Algorithms"
-        url: /study/alg/con
+        url: /study/alg/concept
       - title: "Sort"
         url: /study/alg/sort
+      - title: "Red Black Tree"
+        url: /study/alg/rbt
 
 com:
   - title: Content

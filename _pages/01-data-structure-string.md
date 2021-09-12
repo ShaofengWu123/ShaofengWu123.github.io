@@ -10,7 +10,7 @@ sidebar:
 
 ## 其他的一些概念
 串值、串长、空串、<abbr title="空格组成的串">空白串</abbr>、子串、<abbr title="从1开始计数，要注意英文字符、数字等为1字节，汉字是2字节">子串的位置</abbr>、串相等、串变量、串常量
-            <div id="thediv4" style="display:none">
+
 
 # 数据结构实现
 ## 定长顺序存储实现
