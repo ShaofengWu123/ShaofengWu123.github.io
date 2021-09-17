@@ -52,3 +52,23 @@ $$ \lim_{n \to \infty} \frac{f(x)}{g(x)} = 0$$
 与小o记号类似，在讨论的函数都是渐进非负的情况下，可以认为f(n) = $\omega$(g(n))等价于:  
 $$ \lim_{n \to \infty} \frac{f(x)}{g(x)} = \infty$$  
 这一点可以用上述极限的"$\varepsilon -N$"语言说明
+
+# 常见函数
+
+## 阶乘
+$$
+f(n)
+\begin{cases}
+1, &if\ n=0 \\
+n\ \cdot\ (n-1)!, &if\  n\gt0
+\end{cases}
+$$
+
+### Stirling近似公式
+$$ n! = \sqrt{2{\pi}n}(\frac{n}{e})^n(1+\Theta(\frac{1}{n})) $$
+
+#### 证明应用
+- $ n! = $
+
+
+## 多重函数

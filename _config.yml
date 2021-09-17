@@ -92,6 +92,7 @@ defaults:
       toc_label: "In this page"
       toc_icon: "cog"
       toc_sticky: ture
+      mathjax: true
   # _pages
   - scope:
       path: "_pages"
