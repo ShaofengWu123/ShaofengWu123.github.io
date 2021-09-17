@@ -104,6 +104,7 @@ defaults:
       toc_label: "In this page"
       toc_icon: "cog"
       toc_sticky: ture
+      mathjax: true
 
 category_archive:
   type: liquid
