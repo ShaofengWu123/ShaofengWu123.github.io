@@ -94,7 +94,7 @@ alg:
       - title: "Concept of Algorithms"
         url: /study/alg/concept
       - title: "Asymptotic Notation & Recurrence Equation"
-      url: /study/alg/asymptotic
+        url: /study/alg/asymptotic
       - title: "Sort"
         url: /study/alg/sort
       - title: "Red Black Tree"
