@@ -87,7 +87,7 @@ $$ f(n) = o(g(n))\iff g(n) = \omega(f(n))$$
 
 
 如果按照与实数类比的方法，可以将渐进记号按如下的对应关系理解  
-$$ \Theta 类比于 =$$
+$$ \Theta 类比于 =$$  
 $$ O 类比于 \le$$
 $$ \Omega 类比于 \ge$$
 $$ o 类比于 \lt$$
@@ -111,13 +111,48 @@ $$ \omega 类比于 \gt$$
 # 常见函数
 下面列举了一些常见的函数以及它们的性质
 ## 取整函数
-常用公式如下
-$$x-1\lt\lfloor x\rfloor\le x\le\lceil x\rceil\lt x+1$$
-$$ $$
+常用公式以及结论如下  
+- 取整的差
+$$
+\lceil x\rceil-\lfloor x\rfloor=
+\begin{cases}
+0, &if\ i\ is\ integer \\
+1, &if\ i\ is\ not\ integer
+\end{cases}
+$$
+
+- $x-1\lt\lfloor x\rfloor\le x\le\lceil x\rceil\lt x+1$
+
+- $\lfloor \frac{x}{2} \rfloor + \lceil \frac{x}{2} \rceil  = n$
+- $\lfloor \frac{a}{b} \rfloor \le \frac{(a+(b-1))}{b}$  
+  $\lceil \frac{a}{b} \rceil \ge \frac{(a-(b-1))}{b}$  
+  证明只需设a=kb+m即可
+- $f(x)$是某连续单调上升的函数，并且**只在**整数点才能取整数值，那么其一定满足  
+  $\lfloor f(x)\rfloor = \lfloor f(\lfloor x\rfloor)\rfloor$  
+  $\lceil f(x)\rceil = \lceil f(\lceil x\rceil)\rceil$  
+    
+  **证明**:对第二个式子进行证明，第一个证明类似的。  
+  假设$\exists x_0$，使得$\lceil f(x)\rceil \neq \lceil f(\lceil x\rceil)\rceil$，则一定有$x_0,f(x_0)$均不为整数  
+  由于$f(x_0)$单调上升，因此：  
+  $f(\lceil x_0 \rceil) \gt f(x_0)$并且$\lceil f(x_0)\rceil \neq \lceil f(\lceil x_0\rceil)\rceil$     
+  $\implies \lceil f(x_0)\rceil \lt \lceil f(\lceil x_0\rceil)\rceil$   
+  $\implies \lceil f(x_0)\rceil \le \lceil f(\lceil x_0\rceil)\rceil -1$   
+  $\implies \lceil f(x_0)\rceil \lt f(\lceil x_0\rceil)$   
+  $\implies f(x_0) \lt \lceil f(x_0)\rceil \lt f(\lceil x_0\rceil)$   
+  $\implies$在$x_0,\lceil x_0 \rceil$之间出现了一个整数$y_0$，使得$f(y_0) = \lceil f(x_0)\rceil$，但$x_0,\lceil x_0 \rceil$之间不可能有整数，矛盾，定理得证  
+
+  **推论**:  
+  $\lceil {\frac{\lceil {\frac{n}{a}} \rceil}{b}} \rceil = \lceil {\frac{n}{ab}} \rceil$  
+  $\lfloor {\frac{\lfloor {\frac{n}{a}} \rfloor}{b}} \rfloor = \lfloor {\frac{n}{ab}} \rfloor$  
+
+
+## 模运算
+常用的公式、结论如下  
+- $a\ mod\ n = a-n\lfloor {\frac{a}{n}} \rfloor$
 
 ## 阶乘
 $$
-f(n)
+f(n)=
 \begin{cases}
 1, &if\ n=0 \\
 n\ \cdot\ (n-1)!, &if\  n\gt0
@@ -152,8 +187,9 @@ $$
 多重对数函数的定义区别于多重函数，其最终的函数值为重数i而不是多重计算的结果，其定义为：
 $$ {\lg}^*n = min(i\ge0:\lg^{(i)}n\le 1) $$
 
-若${\lg}^*n = k$，那么实际上$n = 2^{2^{...^{2}}}$，共k个2。  
-另外还满足${\lg}^*2^k = 1+{\lg}^*k$。
+多重对数函数还满足下列关系
+$${\lg}^*n = k \implies n = 2^{2^{{...}^{2}}},共k个2$$  
+$${\lg}^*2^k = 1+{\lg}^*k$$
 
 
 
