@@ -104,8 +104,8 @@ com:
   - title: Content
     children:
       - title: "Introduction"
-        url: /study/com/intro
+        url: /study/compiler/intro
       - title: "Lexical Analysis"
-        url: /study/com/lex
+        url: /study/compiler/lex
 
         
