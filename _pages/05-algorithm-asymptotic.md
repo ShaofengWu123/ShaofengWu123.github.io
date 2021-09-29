@@ -200,3 +200,57 @@ $lg^*n = k \implies n$是2的2次幂的2次幂的...，总共包含k个2
 
 # 递归方程
 求解递归方程主要由三种方法
+## 替代法
+替代法的原理是数学归纳法，通过猜测一个解，然后带入递推式归纳。  
+一个经典的递归方程为$T(n) = 2T(n/2)+\Theta(n)$，其解为$\Theta(nlogn)$。此结论可用于其他方程求解。
+
+### 替代法的技巧
+1. 当某猜测代入后无法得到相同形式的归纳时，原因可能是放缩过度，也有可能是假设不够强，通常可以通过减去一个低阶项来解决，而不要减弱这个假设。  
+**例子**：递归方程$T(n) = T(\lfloor n/2 \rfloor)+T(\lceil n/2 \rceil)+1$，需要证明$T=O(n)$  
+使用假设$T(n)\leq cn$无法证明，可以将假设改为$T(n)\leq cn-1$  
+那么得到$T(n)=c(\lfloor n/2\rfloor+\lceil n/2\rceil)-1\leq cn-1$，得证  
+
+2. 变量代换
+
+
+**例子1**：求解方程$T(n)=2T(\lfloor n/2 \rfloor + 17)+n$  
+上述方程与$T(n) = 2T(n/2)+\Theta(n)$类似。令$S(n)=T(n+34)$  
+则$S(n) = 2T(\lfloor n/2 \rfloor + 34)+n+34 = 2S(\lfloor n/2 \rfloor)+\Theta(n)$，即可解出$S(n)$  
+
+**例子2**：求解方程$T(n)=2T(\sqrt{n})+logn$  
+可令$m=logn$，则原式变为$T(2^m) = 2T(2^{m/2})+m$  
+令$T(2^m)=S(m)$，则$S(m) = 2S(m/2)+m$，故$T(2^m) = \Theta(mlogm))$  
+因此$T(n) = \Theta(lognloglogn)$   
+
+### 替代法的经典错误
+1. 没有严格得到假设的结论，误将归纳不成立的情况当做成立的情况。  
+**例子**：递归方程$T(n) = 2T(\lfloor n/2 \rfloor)+n$，需要证明$T=O(n)$  
+假设$\exist c, s.t. T\leq cn$，代入原式进行归纳推导  
+则$T(n) = 2T(\lfloor n/2 \rfloor)+n \leq 2c\frac{n}{2}+n=cn+n$  
+不满足原假设，不能证明$T\leq cn$
+  
+这里非常容易存在的误区是认为$cn+n=o(n)$，因此得证。这种看法的错误之处在于我们的假设实际上是$\exist c, s.t. T\leq cn \ for\ large\ enough\ n$，因此不符合原假设。
+{.:warning--info}
+
+## 递归树法
+递归树主要的作用是为替代法猜测一个好的解，然后利用替代法进行求解。
+### 主要步骤
+1. 省略原递归方程的一些细节(例如向下取整等)，画出递归树。由于最终只是要猜测一个解，因此省略细节，便于猜测。
+2. 计算各行行和，计算时要注意观察各行行和之间的关系
+3. 根据问题证明的需要，求解整个递归树的代价或者代价的上/下界(例如对于不均衡的递归树)
+
+## 主方法
+主方法即the master method。其描述了某一部分符合特定形式的递归方程的解的结论，具体的证明可以参考《算法导论》  
+### 适用方程
+主方法适用于如下形式的递归方程  
+$$T(n)=aT(n/b)+f(n)$$
+其中$a \geq 1$,$b \gt 1$，$f(n)$渐近非负；并且如果右边部分为$T(\lfloor n/b\rfloor)$或者$T(\lceil n/b\rceil)$，利用主方法解决时可以替换为$T(n/b)$  
+### 三种情况
+主方法包含以下三种情况（假设递归方程均是$T(n)=aT(n/b)+f(n)$形式的）  
+1. $\exist \epsilon, s.t. f(n)=O(n^{log_b a-\epsilon}) \implies T(n)=\Theta (n^{log_b a})$，也即如果$f(n)$比$n^{log_b a}$小多项式量级，那么可以解出$T(n)$的渐近紧确界
+2. $\exist k\geq 0, s.t. f(n)=\Theta (n^{log_b a}log^kn) \implies T(n)=\Theta (n^{log_b a}log^{k+1}n)$，也即如果$f(n)$和$n^{log_b a}log^kn$同量级，那么可以解出$T(n)$的渐近紧确界  
+3. $\exist \epsilon, s.t. f(n)=\Omega (n^{log_b a+\epsilon}) \And \exist c \lt 1,N_0 \gt 0, s.t. af(n/b)\leq cf(n) for\ all\ n\gt N_0 \implies T(n)=\Theta(f(n))$，也即如果$f(n)$比$n^{log_b a}$大多项式量级并且$f(n)$满足某特殊条件，那么可以解出$T(n)$的渐近紧确界
+
+
+**注意**:在case1,2,3之间是存在gap的，即有一些$f(n)$对应情况无法使用主方法。例如$T(n)=4T(b/2)+\frac{n^2}{logn}$，其中$f(n)$小于$n^{log_b a}$，但没有小多项式量级。又例如$T(n)=2T(n/2)+nloglogn$大于$n^{log_b a}log^n$，但没有大多项式量级。
+{:.notice--info}

@@ -12,8 +12,12 @@ tags:
 # Solution 1. Brute-force
 The Brute-force method simply traverse all subarrays of A\[1,..,n] to find the maximum subarray. It takes $\Theta (n^2)$ time.
 
-# Solution 2. Divide and Conquer
+# Solution 2. Divide and Conquer 
 This method can be viewed in *Introduction to Algorithms*. 
+
+![最大子数组分治法](/assets/images/alg/maxsubarray_divide.png)
+
+The algorithm above can be further improved by not searching each entire half array to find maximum cross-sum. We can stop when we go beyond the end of max-subarray in each half. This is because when our array has included the max-subarray in this half, our array will never be greater than the max-subarray. So there is no need to continue iterating.
 
 # Solution 3. Scanning
 This method is based on the fact that if max subarray for $A[1,...,j]$ is already known as $A_{max}$, then new $A_{max}$ in $A[1,...,j+1]$ must be previous $A_{max}$ or subset in the form of $A[k,...,j+!]$. And we can use information from last round of iteration to find the new $A_{max}$ in **constant** time.  
