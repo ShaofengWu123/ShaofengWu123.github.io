@@ -225,11 +225,11 @@ $lg^*n = k \implies n$是2的2次幂的2次幂的...，总共包含k个2
 ### 替代法的经典错误
 1. 没有严格得到假设的结论，误将归纳不成立的情况当做成立的情况。  
 **例子**：递归方程$T(n) = 2T(\lfloor n/2 \rfloor)+n$，需要证明$T=O(n)$  
-假设$\exist c, s.t. T\leq cn$，代入原式进行归纳推导  
+假设$\exists c, s.t. T\leq cn$，代入原式进行归纳推导  
 则$T(n) = 2T(\lfloor n/2 \rfloor)+n \leq 2c\frac{n}{2}+n=cn+n$  
 不满足原假设，不能证明$T\leq cn$
   
-这里非常容易存在的误区是认为$cn+n=o(n)$，因此得证。这种看法的错误之处在于我们的假设实际上是$\exist c, s.t. T\leq cn \ for\ large\ enough\ n$，因此不符合原假设。
+这里非常容易存在的误区是认为$cn+n=o(n)$，因此得证。这种看法的错误之处在于我们的假设实际上是$\exists c, s.t. T\leq cn \ for\ large\ enough\ n$，因此不符合原假设。
 {.:warning--info}
 
 ## 递归树法
@@ -247,9 +247,9 @@ $$T(n)=aT(n/b)+f(n)$$
 其中$a \geq 1$,$b \gt 1$，$f(n)$渐近非负；并且如果右边部分为$T(\lfloor n/b\rfloor)$或者$T(\lceil n/b\rceil)$，利用主方法解决时可以替换为$T(n/b)$  
 ### 三种情况
 主方法包含以下三种情况（假设递归方程均是$T(n)=aT(n/b)+f(n)$形式的）  
-1. $\exist \epsilon, s.t. f(n)=O(n^{log_b a-\epsilon}) \implies T(n)=\Theta (n^{log_b a})$，也即如果$f(n)$比$n^{log_b a}$小多项式量级，那么可以解出$T(n)$的渐近紧确界
-2. $\exist k\geq 0, s.t. f(n)=\Theta (n^{log_b a}log^kn) \implies T(n)=\Theta (n^{log_b a}log^{k+1}n)$，也即如果$f(n)$和$n^{log_b a}log^kn$同量级，那么可以解出$T(n)$的渐近紧确界  
-3. $\exist \epsilon, s.t. f(n)=\Omega (n^{log_b a+\epsilon}) \And \exist c \lt 1,N_0 \gt 0, s.t. af(n/b)\leq cf(n) for\ all\ n\gt N_0 \implies T(n)=\Theta(f(n))$，也即如果$f(n)$比$n^{log_b a}$大多项式量级并且$f(n)$满足某特殊条件，那么可以解出$T(n)$的渐近紧确界
+1. $\exists \epsilon, s.t. f(n)=O(n^{log_b a-\epsilon}) \implies T(n)=\Theta (n^{log_b a})$，也即如果$f(n)$比$n^{log_b a}$小多项式量级，那么可以解出$T(n)$的渐近紧确界
+2. $\exists k\geq 0, s.t. f(n)=\Theta (n^{log_b a}log^kn) \implies T(n)=\Theta (n^{log_b a}log^{k+1}n)$，也即如果$f(n)$和$n^{log_b a}log^kn$同量级，那么可以解出$T(n)$的渐近紧确界  
+3. $\exists \epsilon, s.t. f(n)=\Omega (n^{log_b a+\epsilon}) \And \exists c \lt 1,N_0 \gt 0, s.t. af(n/b)\leq cf(n) for\ all\ n\gt N_0 \implies T(n)=\Theta(f(n))$，也即如果$f(n)$比$n^{log_b a}$大多项式量级并且$f(n)$满足某特殊条件，那么可以解出$T(n)$的渐近紧确界
 
 
 **注意**:在case1,2,3之间是存在gap的，即有一些$f(n)$对应情况无法使用主方法。例如$T(n)=4T(b/2)+\frac{n^2}{logn}$，其中$f(n)$小于$n^{log_b a}$，但没有小多项式量级。又例如$T(n)=2T(n/2)+nloglogn$大于$n^{log_b a}log^n$，但没有大多项式量级。
