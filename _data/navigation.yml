@@ -107,5 +107,7 @@ com:
         url: /study/compiler/intro
       - title: "Lexical Analysis"
         url: /study/compiler/lex
+      - title: "Parsing"
+        url: /study/compiler/parsing
 
         
