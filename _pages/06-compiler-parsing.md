@@ -1,6 +1,6 @@
 ---
 permalink: /study/compiler/parsing
-title: "Parsing\语法分析"
+title: "Parsing/语法分析"
 sidebar:
     nav: "com" 
 ---
