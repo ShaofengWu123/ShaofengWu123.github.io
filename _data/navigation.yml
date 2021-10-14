@@ -95,8 +95,12 @@ alg:
         url: /study/alg/concept
       - title: "Asymptotic Notation & Recurrence Equation"
         url: /study/alg/asymptotic
-      - title: "Sort"
+      - title: "Comparison Sort"
         url: /study/alg/sort
+      - title: "Sort in Linear Time"
+        url: /study/alg/onsort
+      - title: "Selection Problem"
+        url: /study/alg/select
       - title: "Red Black Tree"
         url: /study/alg/rbt
 
