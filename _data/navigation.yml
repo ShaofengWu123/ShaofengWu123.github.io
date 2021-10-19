@@ -101,6 +101,8 @@ alg:
         url: /study/alg/onsort
       - title: "Selection Problem"
         url: /study/alg/select
+      - title: "Dynamic Programming"
+        url: /study/alg/dp
       - title: "Red Black Tree"
         url: /study/alg/rbt
 
