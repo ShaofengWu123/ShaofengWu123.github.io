@@ -45,17 +45,19 @@ sidebar:
 | 3型文法  | 正规文法  |有限自动机 |
 
 **对4种文法的简单理解**  
-1.短语文法 
-
-$\alpha \rightarrow \beta,\alpha \in V^{*} \cup V_N \cup V^*,\beta \in V^{*}$，任何0型语言和递归可枚举集等价，即属于该语言的字符串一定可以被递归枚举加以验证，但是不属于该语言的字符串不一定能在有限时间内得到验证结果    
+1.**短语文法**   
+$\alpha \rightarrow \beta,\alpha \in V^{*} \cup V_N \cup V^{*},\beta \in V^{*}$，任何0型语言和递归可枚举集等价，即属于该语言的字符串一定可以被递归枚举加以验证，但是不属于该语言的字符串不一定能在有限时间内得到验证结果    
 一个0型文法的例子：$L_0 = {wcw|w\in(a|b)^*}$，即w必须先出现才能引用(例如C，java)  
 
-2.上下文有关文法：$\alpha \rightarrow \beta, len(\alpha) \leq len(\beta)$,或者$\alpha A \gamma \rightarrow \alpha \beta \gamma,\alpha , \gamma \in V^*,\beta \in V^+$     
-  可以看到$A$推导到$\beta$是与其前后内容有关的，必须前后分别是$\alpha,\gamma$才能推导 
+2.**上下文有关文法**  
+$\alpha \rightarrow \beta, len(\alpha) \leq len(\beta)$,或者$\alpha A \gamma \rightarrow \alpha \beta \gamma,\alpha , \gamma \in V^*,\beta \in V^+$     
+可以看到$A$推导到$\beta$是与其前后内容有关的，必须前后分别是$\alpha,\gamma$才能推导 
 
-3.上下文无关文法：$A \rightarrow \alpha, \alpha \in V^*, A\in V_N$，有一位计数功能
-
-4.正规文法：$A \rightarrow \alpha\ or\ A \rightarrow \alpha B, \alpha \in V^*_T, A,B \in V_s$，根据产生式的形式可以看出无法计数以及配对  
+3.**上下文无关文法**  
+$A \rightarrow \alpha, \alpha \in V^*, A\in V_N$，有一位计数功能
+ 
+4.**正规文法**  
+$A \rightarrow \alpha\ or\ A \rightarrow \alpha B, \alpha \in V^*_T, A,B \in V_s$，根据产生式的形式可以看出无法计数以及配对  
   
 [扩展：递归可枚举指什么？](https://www.zhihu.com/question/53988049)
 
@@ -178,7 +180,7 @@ $$
 ### 5.4.5.预测分析表
 预测分析表的思想为：**其指示了栈顶符号和当前符号确定时，应该如何推导**。预测分析表的**构建过程实际上是从三方面指示了推导的选择：**
 1. 当对$A$进行推导时，$A \rightarrow \alpha$中$\alpha$所有**首符号**$s$($s \neq \epsilon$)都表明应该按照$A \rightarrow \alpha$推导，因此将该产生式填入M[A,s]
-2. 当对$A$进行推导时，如果$A \rightarrow \alpha$中$\alpha$的首符号包含$\epsilon$（这表示$\alpha$可通过若干步推导到空），那么对于$A$所有**后继符号**$t$(包括\$)，都应按照$A \rightarrow \alpha$推导，因此将该产生式填入M[A,t]，表示结束A的推导，接着进行最左推导
+2. 当对$A$进行推导时，如果$A \rightarrow \alpha$中$\alpha$的首符号包含$\epsilon$（这表示$\alpha$可通过若干步推导到空），那么对于$A$所有**后继符号**$t$(包括结束符)，都应按照$A \rightarrow \alpha$推导，因此将该产生式填入M[A,t]，表示结束A的推导，接着进行最左推导
 3. 当对$A$进行推导时，如果出现的符号不是$A$的首符号，且在$A \implies ^* \epsilon$成立时也不是$A$的后继符号，那么一定出现了推导上的错误。由于推导一直按照预测分析的方式进行，这时可以断言出现语法错误，将`error()`填入（可空白省略），无需回溯。
 
 **上述构建过程的规范化描述**如下，其中$a,b,c$均为非终结符：    
@@ -186,7 +188,8 @@ $$
 \begin{aligned}
 M[A,a] = {A\rightarrow \alpha} &\iff a \in Fisrt(\alpha) -{\epsilon}\\
 M[A,b] = {A\rightarrow \alpha} &\iff \epsilon \in Fisrt(\alpha) \And b \in Follow(A)\\
-M[A,c] = error() &\iff c \notin Fisrt(A) \And (A \implies ^* \epsilon \And c \notin Follow(A))
+M[A,c] = error() &\iff c \notin Fisrt(A) \And \\
+(&A \implies ^* \epsilon \And c \notin Follow(A))
 \end{aligned}
 $$  
 
@@ -250,8 +253,8 @@ $$
 LR(0)分析栈本质上和移进-归约分析栈相同，但是每次移进时先后进栈当前终结符和状态标识，状态标识起到的作用就是让分析器知道当前栈内的信息而不用去搜索栈。  
 LR(0)分析器同样有四种操作action[S,a]：
 1. $s_i$：对应移进，即将$a$和状态$s_i$依次入栈
-2. $r_i$：对应归约，即将栈顶符号按第i个产生式归约，将产生式右部内容全部弹出(包括状态和符号，共$2|S|$个)，将产生式左部非终结符和栈顶状态对应非终结符转移后状态依次入栈，然后再考虑符号a和当前栈顶状态对应动作关系。实际上，这一步即**退回**到之前的某个状态，然后根据归约得到的结果再移动到某个状态，即最左归约后再考虑后续符号。
-3. $acc$：对应接受，只可能是读取到了\$后从包含项目$S^{'} \rightarrow S \cdot$的状态得到
+2. $r_i$：对应归约，即将栈顶符号按第i个产生式归约，将产生式右部内容全部弹出(包括状态和符号，共$2\mid S \mid$个)，将产生式左部非终结符和栈顶状态对应非终结符转移后状态依次入栈，然后再考虑符号a和当前栈顶状态对应动作关系。实际上，这一步即**退回**到之前的某个状态，然后根据归约得到的结果再移动到某个状态，即最左归约后再考虑后续符号。
+3. $acc$：对应接受，**只可能**是读取到了结束符后从包含项目$S^{'} \rightarrow S \cdot$的状态得到
 4. $error()$：对应分析表项为空，表示发生语法错误
 
 
