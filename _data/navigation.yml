@@ -103,8 +103,12 @@ alg:
         url: /study/alg/select
       - title: "Dynamic Programming"
         url: /study/alg/dp
+      - title: "Greedy Algorithm"
+        url: /study/alg/greedy
       - title: "Red Black Tree"
         url: /study/alg/rbt
+      - title: "Fast Fourier Transformation"
+        url: /study/alg/fft
 
 
 com:
@@ -116,6 +120,13 @@ com:
         url: /study/compiler/lex
       - title: "Parsing"
         url: /study/compiler/parsing
+      - title: "Syntax-directed Translation"
+        url: /study/compiler/sdt
+      - title: "Runtime"
+        url: /study/compiler/runtime
+      - title: "Code Generation"
+        url: /study/compiler/cg
+
 
 
 
