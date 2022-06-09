@@ -14,6 +14,12 @@ Sept.2020-July.2022(expected)
 Bachelor of Natural Science in Material Physics                            
 Aug.2016-July.2020
 
+# Experience 
+
+- **Intern, Microsoft Research Asia**  
+  Project: Reliable NVMe Driver for Auto Failover in Public Cloud Infrastructure, Mentor: Dr. Shuotao Xu   				 
+  Nov.2021-June.2022
+
 # Major Awards
 * Outstanding Graduates Award in USTC(2020)
 * Outstanding Graduation Thesis(2020)
