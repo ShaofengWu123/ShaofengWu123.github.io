@@ -12,7 +12,7 @@ Git is a distributed open-source version control tool. Developers use Git to col
 
 # Git commands
 <p>Following is a list of frequently used Git commands and how to use them.</p>
-      
+
 ## git init 
 Create a local repo in your local machine.
 ```
@@ -23,9 +23,18 @@ git init
 Link your local repo with a remote repo, for example, a Github repo.
 ```
 git remote add origin [URL]
-```  
+```
+
+## git clone
+
+Create a local repo. Link the repo to and clone contents from a remote repo.
+
+```
+git clone [URL]
+```
 
 ## git pull
+
 Update the code in your local repo and workspace by pulling codes from remote repo. For example, if you want to pull codes from the linked remote repo's main branch, you should use <code>git pull origin main</code> command.
 ```
 git pull [origin] [branch]
@@ -49,7 +58,7 @@ Commit file in index to local repo. Frequently used command is <code>git commit 
 ```
 git commit [options]
 ```
-      
+
 ## git push
 Push codes to update a branch of a remote repo. <code>git push origin main</code> can update your linked remote repo.
 ```
@@ -63,11 +72,11 @@ git branch [branchname]
 ```
 
 ## git merge
-Merge a branch into current branch. If I am currently in main branch, <code>git merge anotherbranch</code> can merge anotherbranch branch to main branch.
+Merge a branch into current branch. If I am currently in main branch, <code>git merge anotherbranch</code> can merge another branch branch to main branch.
 ```
 git merge [another branchname]
 ```
-      
+
 ## git checkout
 Change to another branch by <code>git checkout [branchname]</code>.
 ```
@@ -85,14 +94,12 @@ git log
 ```
 
 # Some cases
-Here I listed several cases that people, especially beginners, may frequently ecounter when they are using Git.
+Here I listed several cases that people, especially beginners, may frequently encounter when they are using Git.
 ## Q1: How to create a local repo, link it to a remote repo and update it with remote repo?
-<ol>
-  <li><i>Git Bash Here</i>.</li>
-  <li><i><strong>git init</strong></i> to create a local repo. Right now it is empty if we do not consider init logs.</li>
-  <li><i><strong>git add remote origin [URL]</strong></i> to link local repo with remote repo. SSH is recommended to avoid typing username and password.</li>
-  <li><i><strong>git pull origin main</strong></i> to pull codes from remote repo's main branch. Note that previous files in working section will not be removed.</li>
-</ol>
+
+- `git clone` can do this for you. Simply `git clone` a remote repo.
+
+
 <p class="notice--info"><strong>More quick tips</strong>: Always pull codes from remote repo before you get down to coding.</p>
 
 ## Q2: How to delete one or some files in one branch but still keep them in another branch?
@@ -103,3 +110,7 @@ Here I listed several cases that people, especially beginners, may frequently ec
   <li><i><strong>git checkout main</strong></i>, and you will find that deleted files will appear in this branch.</li>
 </ol>
 <p class="notice--info"><strong>More quick tips</strong>: <i><strong>rm -rf [directory]</strong></i> to remove a whole directory (recursively and without asking).</p>
+
+# Reference 
+
+- [GitHub Documentation](https://docs.github.com/en)
