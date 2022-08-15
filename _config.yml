@@ -75,6 +75,9 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:wsf123@mail.ustc.edu.cn"
+    - label: "Resume"
+      icon: "fa-file-text-o"
+      url: ""
 
 defaults:
   # _posts
