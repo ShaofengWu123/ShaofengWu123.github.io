@@ -2,7 +2,9 @@
 permalink: /aboutme/
 title: "About Me"
 ---
-## !!Office Hours
+## Office Hours
+
+<i class="fa-solid fa-calendar-check"></i>
 
 - For research & academic issues (discussions, experiments, course, work...), please contact me during the following office hours. Research & academic related emails, calls, messages or visits are also welcomed outside these hours. 
 
@@ -21,7 +23,7 @@ title: "About Me"
 
 ## Resume
 
-Shaofeng's resume can be downloaded <a href="">here</a>. in pdf format.
+Shaofeng's resume can be downloaded <a href="https://shaofengwu123.github.io/assets/files/CV_Shaofeng_Wu.pdf">here</a> in pdf format.
 
 
 

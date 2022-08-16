@@ -66,6 +66,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:wsf123@mail.ustc.edu.cn"
+    - label: "Résumé"
+      icon: "fas fa-file-alt"
+      url: "https://shaofengwu123.github.io/assets/files/CV_Shaofeng_Wu.pdf"
 
 footer:
   links:
@@ -75,9 +78,7 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:wsf123@mail.ustc.edu.cn"
-    - label: "Resume"
-      icon: "fa-file-text-o"
-      url: ""
+
 
 defaults:
   # _posts
