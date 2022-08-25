@@ -57,8 +57,8 @@ plugins:
 
 author:
   name   : "Shaofeng WU"
-  avatar : "/assets/images/akane.jpg"
-  bio    : "Exercise every day!"
+  avatar : "/assets/images/chisato.jpg"
+  bio    : "In solitude, where we are least alone."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -66,7 +66,7 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:wsf123@mail.ustc.edu.cn"
-    - label: "Résumé"
+    - label: "Resume"
       icon: "fas fa-file-alt"
       url: "https://shaofengwu123.github.io/assets/files/CV_Shaofeng_Wu.pdf"
 
