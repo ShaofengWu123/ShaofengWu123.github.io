@@ -1,7 +1,7 @@
 ---
 title: "Catalan Number"
 categories:
-  - Blog
+  - Tech blog
 tags:
   - math
   - data structure

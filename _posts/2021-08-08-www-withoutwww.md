@@ -1,12 +1,13 @@
 ---
-title: "Wha is the difference between a domain name that has www or no www?"
+title: "What is the difference between a domain name that has www or no www?"
 categories:
-  - Blog
+  - Tech blog
 tags:
   - computer network
 ---
-When browsering websites, you may happen to notice a difference among the domain names that you type into the browser: some of the domain names have "www" prefix while others do not.
+When browsing websites, you may happen to notice a difference among the domain names that you type into the browser: some of the domain names have "www" prefix while others do not.
 What's more, sometimes you can use these two kinds of domain names to visit the same website. For example, you can try links below to visit Baidu search engine website:  
+
 - [https://www.baidu.com/](https://www.baidu.com/) 
 - [https://baidu.com/](https://baidu.com/)  
 
@@ -20,11 +21,11 @@ IP address identifies a router, a host or other devices in network layer. For IP
 Then next questions is: how do we know the domain name of an IP address?
 
 ## Domain name system(DNS)
-DNS is a protocal that runs on application layer. It is used to establish the mapping between IP address and its domain name. When you use a domain name to visit a website, it is translated into an IP address if there has been already records in your computer. If not, DNS request is first sent to DNS server to ask if there is any record of the domain name you want to visit.
+DNS is a protocol that runs on application layer. It is used to establish the mapping between IP address and its domain name. When you use a domain name to visit a website, it is translated into an IP address if there has been already records in your computer. If not, DNS request is first sent to DNS server to ask if there is any record of the domain name you want to visit.
 
 ## URL and http
-To visit a website, type its domain name into the browser is not enough. Something like "http://" should be added to the prefix of the domain name, which refers to the protocal. So the complete form is "https:///www.baidu.com" and it is called a Uniform Resource Locator(URL). As its name suggests, URL is used to locate resource on the Internet. 
+To visit a website, type its domain name into the browser is not enough. Something like "http://" should be added to the prefix of the domain name, which refers to the protocol. So the complete form is "https:///www.baidu.com" and it is called a Uniform Resource Locator(URL). As its name suggests, URL is used to locate resource on the Internet. 
 
-# Why www and whynot?
+# Why www and why not?
 
 # References
