@@ -6,10 +6,10 @@ tags:
   - computer network
 ---
 When browsing websites, you may happen to notice a difference among the domain names that you type into the browser: some of the domain names have "www" prefix while others do not.
-What's more, sometimes you can use these two kinds of domain names to visit the same website. For example, you can try links below to visit Baidu search engine website:  
+What's more, sometimes you can use these two kinds of domain names to visit the same website. For example, you can try links below to visit Google search engine website:  
 
-- [https://www.baidu.com/](https://www.baidu.com/) 
-- [https://baidu.com/](https://baidu.com/)  
+- https://www.google.com/
+- https://google.com/
 
 So why does some domain names have "www"? And what is the point in having a "www" prefix while you can use its alternative(without "www") to visit the same website? Questions will be answered below.
 
@@ -28,4 +28,9 @@ To visit a website, type its domain name into the browser is not enough. Somethi
 
 # Why www and why not?
 
+With all background knowledge provided, let's talk about www and non-www domain name. The  
+
 # References
+
+
+

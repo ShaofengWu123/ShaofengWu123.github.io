@@ -25,3 +25,4 @@ Then the biggest question is: what information should we record in a round of it
 
 ![最大子数组线性时间算法](/assets/images/alg/maxsubarray_On.png)
 
+The code for scanning method can be view [here](https://github.com/ShaofengWu123/toy_questions/tree/main/max_subarray).
