@@ -1,6 +1,8 @@
 main:
   - title: "About Me"
     url: /aboutme/
+  - title: "Research"
+    url: /research/
   - title: "Study"
     url: /study/
   - title: "Posts"
@@ -13,17 +15,17 @@ main:
 study:
   - title: Study Materials
     children:
-      - title: "Data Structure/数据结构"
+      - title: "Data Structure"
         url: /study/data-structure/
-      - title: "Computer Network/计算机网络"
+      - title: "Computer Network"
         url: /study/computer-network/
-      - title: "Operating Systems/操作系统"
+      - title: "Operating Systems"
         url: /study/os/
-      - title: "Computer Organization and Design/计算机组成原理"
+      - title: "Computer Organization and Design"
         url: /study/cod/
-      - title: "Foundations of Algorithms/算法基础"
+      - title: "Foundations of Algorithms"
         url: /study/alg/
-      - title: "Pinciples of Compiler/编译原理"
+      - title: "Pinciples of Compiler"
         url: /study/compiler/
 
 ds:
@@ -127,6 +129,20 @@ com:
       - title: "Code Generation"
         url: /study/compiler/cg
 
+research:
+  - title: Content
+    children:
+      - title: "SmartNIC/DPU"
+        url: /research/dpu
+
+dpu:
+  - title: Content
+    children:
+      - title: "Intro"
+        url: /research/dpu/intro
+      - title: "Notes"
+        url: /research/dpu/notes
+      
 
 
 
