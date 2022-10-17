@@ -1,5 +1,5 @@
 ---
-permalink: /research/dpu_notes/
+permalink: /research/dpu/notes/
 title: "Notes"
 sidebar:
     nav: "dpu" 
