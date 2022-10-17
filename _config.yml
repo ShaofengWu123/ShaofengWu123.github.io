@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "Shaofeng WU"
   avatar : "/assets/images/asuka_11.jpg"
-  bio    : "In solitude, where we are least alone."
+  bio    : "PhD student of CSE, CUHK."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
