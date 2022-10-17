@@ -6,8 +6,6 @@ tags:
   - C 
   - Compilation and Linkage 
 ---
-# Intro
-
 As a C programmer, you may occasionally notice the usage of  keywords `static` and `extern` in other people's code. What's more, you may also notice the combination of `static inline` or `extern inline` in some projects, e.g. in linux kernel. We will discuss some confusing terms regarding this in the following sections.  
 
 
