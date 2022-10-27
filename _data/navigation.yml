@@ -3,7 +3,7 @@ main:
     url: /aboutme/
   - title: "Research"
     url: /research/
-  - title: "Study"
+  - title: "Notes"
     url: /study/
   - title: "Posts"
     url: /posts/
@@ -13,8 +13,10 @@ main:
     url: /misc/
 
 study:
-  - title: Study Materials
+  - title: Course Notes
     children:
+      - title: "Linux"
+        url: /notes/linux/
       - title: "Data Structure"
         url: /study/data-structure/
       - title: "Computer Network"
@@ -27,6 +29,14 @@ study:
         url: /study/alg/
       - title: "Pinciples of Compiler"
         url: /study/compiler/
+
+linux:
+  - title: Linux
+    children:
+      - title: "Intro"
+        url: /notes/linux/
+      - title: "Commands"
+        url: /notes/linux/cmd
 
 ds:
   - title: Content
@@ -140,8 +150,8 @@ dpu:
     children:
       - title: "Intro"
         url: /research/dpu/intro
-      - title: "Notes"
-        url: /research/dpu/notes
+      - title: "Docs"
+        url: /research/dpu/docs
       
 
 

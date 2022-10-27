@@ -1,10 +1,6 @@
 ## Description
 Personal website of Shaofeng WU.
 
-Contents:
-- Daily blog
-- Study materials of USTC CS course
-
 ---
 
 ## About Jekyll
