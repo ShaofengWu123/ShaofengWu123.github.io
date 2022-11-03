@@ -74,7 +74,7 @@ SmartNIC/DPU refers to a new generation of network adapters. DPU is a SoC, with 
 
 - Running examples. Examples are located in `/opt/mellanox/doca/application` in DPU. Take `url_filter ` as the example[^1].
 
-  - Preparation 1: configure corresponding SF.
+  - Preparation 1: configure corresponding SF and start regx engine.
 
   - Preparation 2: configure hugepage for `url_filter`.
 
