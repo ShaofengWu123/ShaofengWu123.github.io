@@ -1,13 +1,18 @@
+---
+search: false
+---
+
 @charset "utf-8";
 
 @font-face {
-    font-family: 'Linux-Libertine'; /* normal */
+    font-family: 'Linux Libertine'; /* normal */
     src: url('/assets/fonts/LinLibertine_R.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-$global-font-family: Linux-Libertine !default;
+$linux-font: 'Linux-Libertine', sans-serif !default;
+$global-font-family: $linux-font !default;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
