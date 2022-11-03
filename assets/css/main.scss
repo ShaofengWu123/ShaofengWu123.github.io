@@ -11,6 +11,10 @@ search: false
 //     font-style: normal;
 // }
 
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
 @font-face {
     font-family: 'Linux Libertine';
     font-style: normal;
@@ -19,6 +23,3 @@ search: false
 }
 
 $sans-serif: 'Linux Libertine', sans-serif;
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
