@@ -18,8 +18,7 @@ search: false
     src: local('Linux Libertine'), url('https://fonts.cdnfonts.com/s/282/LinLibertine_Re-4.1_.8_.woff') format('woff');
 }
 
-$linux-font: 'Linux-Libertine', sans-serif;
-$global-font-family: $linux-font;
+$sans-serif: 'Linux-Libertine', sans-serif;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
