@@ -11,6 +11,7 @@ search: false
 //     font-style: normal;
 // }
 
+$link-color: red;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
@@ -23,4 +24,3 @@ search: false
 }
 
 $sans-serif: 'Linux Libertine', sans-serif;
-$link-color: red;
