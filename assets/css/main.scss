@@ -11,16 +11,18 @@ search: false
 //     font-style: normal;
 // }
 
-$link-color: red;
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+//$link-color: red;
 
 @font-face {
     font-family: 'Linux Libertine';
     font-style: normal;
     font-weight: 400;
-    src: local('Linux Libertine'), url('https://fonts.cdnfonts.com/s/282/LinLibertine_Re-4.1_.8_.woff') format('woff');
+    src: url('https://fonts.cdnfonts.com/s/282/LinLibertine_Re-4.1_.8_.woff') format('woff');
 }
 
-$sans-serif: 'Linux Libertine', sans-serif;
+$sans-serif: 'Linux Libertine', serif;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
