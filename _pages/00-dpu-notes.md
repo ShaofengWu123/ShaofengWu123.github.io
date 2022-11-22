@@ -7,8 +7,15 @@ sidebar:
 
 # NVIDIA Docs
 
-- What is a DPU? [What Is a SmartNIC? | NVIDIA Blog](https://blogs.nvidia.com/blog/2021/10/29/what-is-a-smartnic/)
+## Introduction
+
+- [What is a DPU?](https://blogs.nvidia.com/blog/2021/10/29/what-is-a-smartnic/)
 - [DOCA](https://courses.nvidia.com/courses/course-v1:DLI+S-NP-01+V1/course/)
+
+## SF Usage and OVS Configuration
+
+- [vSwitch and Representors Model :: NVIDIA DOCA SDK Documentation](https://docs.nvidia.com/doca/sdk/vswitch-and-representors-model/index.html)
+- [Scalable Function (SFs) :: NVIDIA DOCA SDK Documentation](https://docs.nvidia.com/doca/sdk/scalable-functions/index.html)
 
 
 
@@ -72,7 +79,30 @@ Set-up steps of SF on BlueField
     devlink dev show
     ```
 
-    
+
+
+
+# Useful Commands
+
+## View status
+
+```bash
+root@dpu: sudo mlxconfig -d /dev/mst/mt* q
+```
+
+## OVS Commands
+
+These commands can be used for OVS configuration in DPU.
+
+```bash
+sudo ovs-vsctl show 
+sudo ovs-vsctl del-br ovsbr1 
+sudo ovs-vsctl del-br ovsbr2 
+sudo /usr/share/openvswitch/scripts/ovs-ctl stop 
+sudo /etc/init.d/openvswitch-switch restart 
+```
+
+
 
 
 
