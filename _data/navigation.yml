@@ -150,10 +150,13 @@ research:
 dpu:
   - title: Content
     children:
-      - title: "Intro"
+      - title: "Installtion"
         url: /research/dpu/intro
       - title: "Docs"
         url: /research/dpu/docs
+      - title: "RXPbench"
+        url: /research/dpu/rxpbench
+
       
 
 
