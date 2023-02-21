@@ -66,13 +66,49 @@ SmartNIC/DPU refers to a new generation of network adapters. DPU is a SoC, with 
   - IP: 198.168.100.x
   - netmask: 255.255.255.0
 
+## Accessing Network from SmartNIC [3][4]
+### Preparation
+- Stop ovs.
+- Make sure interfaces `tmfifo_net0` are assigned with an ip address on both host and SmartNIC.
+
+
+### Setting Host Iptables
+
+```console
+# Turn on IPv4 forwarding
+sfwu22@dpu:~$ echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward
+
+# Configure IP forwarding rules for the internet-facing interface eno1
+sfwu22@dpu:~$ iptables -A FORWARD -o eno1 -j ACCEPT
+sfwu22@dpu:~$ iptables -A FORWARD -m state --state ESTABLISHED,RELATED -i eno1 - j ACCEPT
+
+# Configure the NAT rule for the internet-facing interface eno1
+sfwu22@dpu:~$ iptables -t nat -A POSTROUTING -o eno1 -j MASQUERADE
+```
+### DNS Server
+Check the DNS server in current domain. The DNS server address can be checked and configured with:
+```console
+# On host/SmartNIC
+sfwu22@proj88:~$ systemd-resolve --status
+
+# Set DNS server of SmartNIC
+# For group SmartNIC
+sfwu22@dpu:~$ echo "nameserver 192.168.50.254" | sudo tee /etc/resolv.conf
+# For CloudLab SmartNIC
+sfwu22@dpu:~$ echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
+```
+### Proxy Server
+If host sits behind a proxy server, SmartNIC should be configured with the same proxy server. 
+
+Then SmartNIC is good to go!
+
 ## Additional Configuration
 
 - Firmware update.
 
-- Subfunction configuration[^2].
+- Subfunction configuration[2].
 
-- Running examples. Examples are located in `/opt/mellanox/doca/application` in DPU. Take `url_filter ` as the example[^1].
+- Running examples. Examples are located in `/opt/mellanox/doca/application` in DPU. Take `url_filter ` as the example[1].
 
   - Preparation 1: configure corresponding SF and start regx engine.
 
@@ -88,5 +124,7 @@ SmartNIC/DPU refers to a new generation of network adapters. DPU is a SoC, with 
 
 ## Reference
 
-[^1]: [URL Filter :: NVIDIA DOCA SDK Documentation](https://docs.nvidia.com/doca/sdk/url-filter/index.html)
-[^2]: [Scalable Function (SFs) :: NVIDIA DOCA SDK Documentation](https://docs.nvidia.com/doca/sdk/scalable-functions/index.html)
+[1]: [URL Filter :: NVIDIA DOCA SDK Documentation](https://docs.nvidia.com/doca/sdk/url-filter/index.html)
+[2]: [Scalable Function (SFs) :: NVIDIA DOCA SDK Documentation](https://docs.nvidia.com/doca/sdk/scalable-functions/index.html)
+[3]: [NVIDIA Mellanox Bluefield-2 SmartNIC Hands-On Tutorial: “Rig for Dive” — Part I: Install Drivers and Access the SmartNIC](https://medium.com/codex/getting-your-hands-dirty-with-mellanox-bluefield-2-dpus-deployed-in-cloudlabs-clemson-facility-bcb4e689c7e6)
+[4]: [Configuring NVIDIA BlueField2 SmartNIC](https://insujang.github.io/2022-01-06/configuring-nvidia-bluefield2-smartnic/)

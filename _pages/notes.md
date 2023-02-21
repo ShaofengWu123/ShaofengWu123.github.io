@@ -1,5 +1,5 @@
 ---
-permalink: /study/
+permalink: /notes/
 title: "Notes"
 sidebar:
   nav: "study"

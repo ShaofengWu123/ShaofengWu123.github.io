@@ -6,7 +6,7 @@ main:
   - title: "Research"
     url: /research/
   - title: "Notes"
-    url: /study/
+    url: /notes/
   - title: "Posts"
     url: /posts/
   # - title: "Categories"
@@ -35,10 +35,10 @@ study:
 linux:
   - title: Linux
     children:
-      - title: "Intro"
-        url: /notes/linux/
       - title: "Commands"
         url: /notes/linux/cmd
+      - title: "Iptables"
+        url: /notes/linux/iptables/
 
 ds:
   - title: Content

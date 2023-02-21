@@ -5,15 +5,20 @@ sidebar:
     nav: "linux" 
 ---
 
-Here is some useful Linux commands that are frequently used.
+Here are some useful Linux commands.
 
 # Network Configuration
 
 ## ip
 
-
-
 ## ifconfig
+``sudo ifconfig [interface] [ip addr] netmask [netmask] [up/down]`` 
+```console
+sfwu22@proj88:~$ sudo ifconfig tmfifo_net0 192.168.100.1 netmask 255.255.255.0 up
+```
+
+## iptables
+Check [this link](/notes/linux/iptables).
 
 # File Transmission
 
@@ -23,14 +28,14 @@ Here is some useful Linux commands that are frequently used.
 
 On Linux platforms
 
-```
-wget [url]
+```console
+sfwu22@proj88:~$ wget [url]
 ```
 
 For Windows, `wget` is the alias for `Invoke-WebRequest`. One must specify url and file name to correctly download a file.
 
-```
-wget -Uri [url] -OutFile "filename.xxx"
+```console
+sfwu22@proj88:~$ wget -Uri [url] -OutFile "filename.xxx"
 ```
 
 
@@ -41,8 +46,8 @@ wget -Uri [url] -OutFile "filename.xxx"
 
 Transmitting files from Windows to Linux.
 
-```
-scp C:\Users\shaofeng\filename shaofeng@[target_alias/ip]:/home/shaofeng/directory
+```console
+sfwu22@proj88:~$ scp C:\Users\shaofeng\filename shaofeng@[target_alias/ip]:/home/shaofeng/directory
 ```
 
 
