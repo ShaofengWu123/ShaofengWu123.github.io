@@ -24,16 +24,16 @@ sfwu22@proj88:~$ sudo iptables -t nat -nvL --line-number
 ## Add/Insert Rules
 ```console
 # add rules to the end of a table
-sfwu22@proj88:~$ sudo iptables -nvL --line-number
+sfwu22@proj88:~$ sudo iptables -A INPUT -s 100.100.100.0/24 -j ACCEPT
 ...
 # insert rule into a table
-sfwu22@proj88:~$ sudo iptables -t nat -nvL --line-number
+sfwu22@proj88:~$ sudo iptables -I INPUT 2 -s 100.100.100.0/24 -j ACCEPT
 ```
 
 ## Delete Rules
 ```console
 # delete rule number 1 from INPUT chain
-sfwu22@proj88:~$ sudo iptables -D FORWARD 1
+sfwu22@proj88:~$ sudo iptables -D INPUT 1
 
 # delete rule number 1 from nat table POSTROUTING chain
 sfwu22@proj88:~$ sudo iptables -t nat -D POSTROUTING 1
