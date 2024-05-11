@@ -75,7 +75,7 @@ Personal Email: shaofengwu123 [at] gmail.com<br/>
 <!-- ## About Me -->
 
 ## Bio
-I am a 1st-year Ph.D. student from NetX Lab, Department of Computer Science and Engineering, The Chinese University of Hong Kong (CUHK), advised by Prof. Hong Xu, Henry. I received my B.S. in Material Physics and Second B.E. in Computer Science and Engineering in 2020 and 2022 respectively from University of Science and Technology of China (USTC).                                                                         
+I am a 2nd-year Ph.D. student from NetX Lab, Department of Computer Science and Engineering, The Chinese University of Hong Kong (CUHK), advised by Prof. Hong Xu, Henry. I received my B.S. in Material Physics and Second B.E. in Computer Science and Engineering in 2020 and 2022 respectively from University of Science and Technology of China (USTC).                                                                         
 
 I am interested in computer networking and systems. My current research projects focus on supporting SmartNIC/DPU as part of data center infrastructure to better serve its workloads, e.g., NFV and microservices.
 
