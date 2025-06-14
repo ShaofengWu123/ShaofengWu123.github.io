@@ -1,18 +1,18 @@
-primary_name: "Your Name"
-secondary_name: ""
-navbar_name: "Your Name"
+primary_name: "Shaofeng Wu"
+secondary_name: "伍少枫"
+navbar_name: ""
 
-positions:
-- logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
-  name: Position 1 with logo
-- name: Position 2 without logo
+# positions:
+# - logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+#   name: Position 1 with logo
+# - name: Position 2 without logo
 
 
-email: "your@email.com"
+email: "wsf123@link.cuhk.edu.hk"
 # cv_link: link-to-your-cv-file
-gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
-github: your_github_id
-twitter: your_twitter_id  # Do not include the '@' symbol
+# gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
+github: ShaofengWu123
+# twitter: your_twitter_id  # Do not include the '@' symbol
 # wechat_qrcode: /assets/images/etc/wechat.jpg
 # wechat_prompt: >-
 #   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
@@ -22,40 +22,46 @@ twitter: your_twitter_id  # Do not include the '@' symbol
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
-  </p>
-  <p>
-    There are various patterns of a bicolour cat. These range from the Van-patterned (colour on the crown of the head 
-    and the tail only) to a solid colour with a throat locket or medallion. Bicolour coats are found in many cat breeds, 
-    as well as being common in domestic longhair and domestic shorthair cats.
+    Ph.D. Candidate at CUHK. Data Center Networking & Programmable Dataplane.
   </p>
 
-portrait_url: /assets/images/photos/portrait.jpg
+portrait_url: /assets/images/photos/doudou.jpg
 portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+  Doudou in sleep.
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
-  position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
-    Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+- name: The Chinese University of Hong Kong
+  logo: /assets/images/badges/cuhk.png
+  position: >-  
+    Department of Computer Science and Engineering <br/>
+    Ph.D. Candidate
+  date: July 2024 - present 
+  position2: Ph.D. Student
+  date2: Aug. 2022 - July 2024 
+- name: University of Science and Technology of China
+  logo: /assets/images/badges/ustc.png
+  position: Second Bachelor of Engineering in Computer Science and Technology
+  date: July 2020 - June 2022
+  position2: Bachelor of Natural Science in Material Physics
+  date2: July 2016 - June 2020
+  
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+experience:
+- name: Microsoft Research Asia, Beijing
+  logo: /assets/images/badges/ms.jpg
+  position: Research Intern
+  date: June 2024 - present
+- name: Microsoft Research Asia, Shanghai
+  logo: /assets/images/badges/ms.jpg
+  position: Research Intern
+  date: Nov. 2021 - June 2022
 
 awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+- name: Provost's Strategic Allocation of Centrally-Funded RPg Places
+  date: 2022-2026
+- name: Outstanding Graduates Award in USTC
+  date: 2020
+- name: Outstanding Graduation Thesis in USTC
+  date: 2020
+- name: Outstanding Undergraduate Scholarship in USTC
+  date: 2017, 2018, 2019
