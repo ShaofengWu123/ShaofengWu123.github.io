@@ -50,13 +50,15 @@ experience:
 - name: Microsoft Research Asia, Beijing
   logo: /assets/images/badges/ms.jpg
   position: Research Intern
-  date: June 2024 - present
+  date: June 2024 - Dec. 2025
 - name: Microsoft Research Asia, Shanghai
   logo: /assets/images/badges/ms.jpg
   position: Research Intern
   date: Nov. 2021 - June 2022
 
 awards:
+- name:  Student Travel Grant, ASPLOS 
+  date: 2025
 - name: Provost's Strategic Allocation of Centrally-Funded RPg Places
   date: 2022-2026
 - name: Outstanding Graduates Award in USTC

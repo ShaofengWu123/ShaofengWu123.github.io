@@ -66,13 +66,19 @@ div.lazy {
 
 .badge-conference {
     font-size: 100%;
-    background-color: rgb(30, 70, 110); /* Replace with your desired color */
+    background-color: rgb(82, 143, 173); /* Replace with your desired color */
     color: white; /* Text color */
 }
 
 .badge-preprint {
     font-size: 100%;
-    background-color: rgb(82, 143, 173); /* Replace with your desired color */
+    background-color: rgb(30, 70, 110); /* Replace with your desired color */
+    color: white; /* Text color */
+}
+
+.badge-workshop {
+    font-size: 100%;
+    background-color: rgb(30, 70, 110); /* Replace with your desired color */
     color: white; /* Text color */
 }
 
