@@ -7,4 +7,9 @@ homepage:
 # Feel free to replace the footer text if you would like to, but I will greatly appreciate it 
 # if you keep the link to the template so that more people can benefit from it. Thanks!
 footer_text: >-
-  <a href="https://info.flagcounter.com/oPgE"><img src="https://s05.flagcounter.com/count2/oPgE/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_Who+was+here/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+  <div style="text-align:center;">
+    <div style="width:200px; height:200px; margin:0 auto;">
+      <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=efYBc7wCfcupmxJThbMNbhMN4p6Keg8lWHHLICYrGp4"></script>
+    </div>
+  </div>
+
