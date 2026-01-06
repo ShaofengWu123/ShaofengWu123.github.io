@@ -25,9 +25,11 @@ short_bio: >-
     Ph.D. Candidate at CUHK. Data Center Networking & Programmable Dataplane.
   </p>
 
-portrait_url: /assets/images/photos/doudou.jpg
-portrait_caption: >-
-  Doudou in sleep.
+# portrait_url: /assets/images/photos/doudou.jpg
+# portrait_caption: >-
+#   Doudou in sleep.
+
+portrait_url: /assets/images/photos/shaofeng.jpg
 
 education:
 - name: The Chinese University of Hong Kong
