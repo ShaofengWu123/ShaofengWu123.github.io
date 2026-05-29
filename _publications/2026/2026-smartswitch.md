@@ -3,7 +3,7 @@ title:          "Offloading Cloud Network Services at Production Scale with SONi
 date:           2026-05-01 00:00:00 +0800
 selected:       true
 pub:            "23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI'26)"
-pub_last:       '<span class="badge badge-pill badge-conference">Conference Industrial Track</span><span class="badge badge-pill badge-network">Network</span>'
+pub_last:       '<span class="badge badge-pill badge-conference">Conference Industrial Track</span><span class="badge badge-pill badge-network">Network</span><span class="badge badge-pill badge-award">Community Award</span>'
 pub_date:       "2026"
 
 # abstract: >-
@@ -48,6 +48,6 @@ authors:
   - Yongqiang Xiong
   - Hong Xu
 links:
-  Paper:  https://shaofengwu123.github.io/
-  Poster: https://shaofengwu123.github.io/
+  Paper:  https://www.usenix.org/conference/nsdi26/presentation/wu-shaofeng
+  Slides: https://www.usenix.org/conference/nsdi26/presentation/wu-shaofeng
 ---

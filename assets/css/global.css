@@ -100,6 +100,12 @@ div.lazy {
     color: white; /* Text color */
 }
 
+.badge-award {
+    font-size: 100%;
+    background-color: rgb(217, 088, 041); /* Replace with your desired color */
+    color: white; /* Text color */
+}
+
 
 .email-text {
     font-family: Courier, monospace;
