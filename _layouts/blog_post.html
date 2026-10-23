@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="blog-layout-wrapper">
+    <div class="blog-main">
+        <a class="aero-back-link" href="{{ '/blog' | relative_url }}">{% include aero/icon.html name='back' %} All blog posts</a>
+        <article class="aero-panel aero-blog-article">
+            <header class="aero-article-header">
+                {% include aero/icon.html name='blog' class='aero-icon--large' %}
+                <h1>{{ page.title | escape }}</h1>
+                <div class="aero-article-meta">
+                    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+                    {% if page.tags %}
+                    <span class="aero-tags">{% for tag in page.tags %}<span class="badge badge-light">{{ tag }}</span>{% endfor %}</span>
+                    {% endif %}
+                </div>
+            </header>
+            <div class="blog-content aero-panel-body">{{ content }}</div>
+        </article>
+    </div>
+    <aside class="blog-toc-sidebar">
+        <nav id="blog-toc" class="blog-toc-nav aero-panel" aria-label="Table of contents">
+            <div class="blog-toc-title aero-panel-title">{% include aero/icon.html name='publications' %} Contents</div>
+            <ul class="blog-toc-list"></ul>
+        </nav>
+    </aside>
+</div>

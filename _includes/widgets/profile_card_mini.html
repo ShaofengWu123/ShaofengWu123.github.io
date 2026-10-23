@@ -1,0 +1,20 @@
+<aside class="aero-profile-sidebar">
+    <section class="aero-panel aero-profile-card" aria-labelledby="profile-name">
+        <div class="aero-profile-top">
+            {% if site.data.profile.portrait_url %}
+            <img src="{{ site.data.profile.portrait_url | relative_url }}" class="aero-portrait" alt="{{ site.data.profile.primary_name | escape }}"{% if site.data.profile.portrait_caption %} title="{{ site.data.profile.portrait_caption | strip_html | escape }}"{% endif %}>
+            {% else %}
+            {% include aero/icon.html name='profile' class='aero-icon--large' %}
+            {% endif %}
+        </div>
+        <div class="aero-panel-body">
+            <h2 id="profile-name" class="aero-profile-name">{{ site.data.profile.primary_name | escape }}{% if site.data.profile.secondary_name != '' %} <small>{{ site.data.profile.secondary_name | escape }}</small>{% endif %}</h2>
+            <div class="text-profile-position">
+                {% for position in site.data.profile.positions %}
+                <div>{% if position.logo %}<img src="{{ position.logo | relative_url }}" alt="" class="inline-badge">{% endif %}{{ position.name }}</div>
+                {% endfor %}
+            </div>
+            {% include widgets/profile_links.html %}
+        </div>
+    </section>
+</aside>

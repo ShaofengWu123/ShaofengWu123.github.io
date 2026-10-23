@@ -1,0 +1,11 @@
+<section class="aero-panel" aria-labelledby="about-title">
+    <header class="aero-panel-title">
+        {% include aero/icon.html name='profile' %}<h2 id="about-title">About Me</h2>
+    </header>
+    <div class="aero-panel-body text-profile-bio"{% if site.data.profile.short_bio_text_justify %} style="text-align: justify;"{% endif %}>
+        {{ site.data.profile.short_bio }}
+        {% if site.data.profile.cv_link %}
+        <a class="aero-button" target="_blank" rel="noopener noreferrer" href="{{ site.data.profile.cv_link | relative_url }}">{% include aero/icon.html name='download' %} Curriculum Vitae</a>
+        {% endif %}
+    </div>
+</section>

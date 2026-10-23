@@ -1,0 +1,10 @@
+{% if site.data.profile.awards %}
+<section class="aero-panel my-3" aria-labelledby="awards-title">
+    <header class="aero-panel-title">{% include aero/icon.html name='awards' %}<h2 id="awards-title">Honors &amp; Awards</h2></header>
+    <div class="aero-panel-body">
+        <ul class="aero-awards-list">
+            {% for item in site.data.profile.awards %}<li><span>{{ item.name }}</span><span class="aero-date">{{ item.date }}</span></li>{% endfor %}
+        </ul>
+    </div>
+</section>
+{% endif %}

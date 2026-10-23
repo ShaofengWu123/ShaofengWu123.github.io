@@ -2,13 +2,12 @@ primary_name: "Shaofeng Wu"
 secondary_name: "伍少枫"
 navbar_name: ""
 
-# positions:
-# - logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
-#   name: Position 1 with logo
-# - name: Position 2 without logo
+positions:
+- name: Senior Researcher
+- name: Microsoft Research Asia
 
 
-email: "wsf123@link.cuhk.edu.hk"
+email: "shaofengwu@microsoft.com"
 # cv_link: link-to-your-cv-file
 # gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
 github: ShaofengWu123
@@ -22,24 +21,21 @@ github: ShaofengWu123
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    Ph.D. Candidate at CUHK. Data Center Networking & Programmable Dataplane.
+    I am a Senior Researcher in the Networking Infrastructure Group at Microsoft Research Asia. Prior to this, I completed my Ph.D. at the Department of Computer Science and Engineering at The Chinese University of Hong Kong, supervised by Prof. Hong Xu, and received my bachelor's degrees in Computer Science and Material Physics from the University of Science and Technology of China (USTC).
+  </p>
+  <p>
+    My research is primarily concentrated on systems and networking for cloud and next-generation AI infrastructure (particularly programmable dataplanes such as SmartNICs/DPUs), with a strong emphasis on deploying these technologies in real-world production environments to address practical challenges.
   </p>
 
-# portrait_url: /assets/images/photos/doudou.jpg
-# portrait_caption: >-
-#   Doudou in sleep.
-
-portrait_url: /assets/images/photos/shaofeng.jpg
+portrait_url: /assets/images/photos/doudou.jpg
 
 education:
 - name: The Chinese University of Hong Kong
   logo: /assets/images/badges/cuhk.png
   position: >-  
     Department of Computer Science and Engineering <br/>
-    Ph.D. Candidate
-  date: July 2024 - present 
-  position2: Ph.D. Student
-  date2: Aug. 2022 - July 2024 
+    Ph.D.
+  date: Aug. 2022 - Sep. 2026
 - name: University of Science and Technology of China
   logo: /assets/images/badges/ustc.png
   position: Second Bachelor of Engineering in Computer Science and Technology
@@ -49,6 +45,10 @@ education:
   
 
 experience:
+- name: Microsoft Research Asia, Beijing
+  logo: /assets/images/badges/ms.jpg
+  position: Senior Researcher
+  date: Sep. 2026 - present
 - name: Microsoft Research Asia, Beijing
   logo: /assets/images/badges/ms.jpg
   position: Research Intern
@@ -61,15 +61,5 @@ experience:
 awards:
 - name: Community Award, USENIX NSDI'26
   date: 2026
-- name: Stars of Tomorrow, MSRA 
+- name: Stars of Tomorrow, MSRA
   date: 2026
-- name: Student Travel Grant, ASPLOS 
-  date: 2025
-- name: Provost's Strategic Allocation of Centrally-Funded RPg Places
-  date: 2022-2026
-- name: Outstanding Graduates Award in USTC
-  date: 2020
-- name: Outstanding Graduation Thesis in USTC
-  date: 2020
-- name: Outstanding Undergraduate Scholarship in USTC
-  date: 2017, 2018, 2019

@@ -50,4 +50,5 @@ authors:
 links:
   Paper:  https://www.usenix.org/conference/nsdi26/presentation/wu-shaofeng
   Slides: https://www.usenix.org/conference/nsdi26/presentation/wu-shaofeng
+  Talk:   https://www.youtube.com/watch?v=QWYJG4D6dL8
 ---

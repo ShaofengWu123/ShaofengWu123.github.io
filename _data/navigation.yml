@@ -5,7 +5,7 @@ pages:
   url: /
 - name: Publications
   url: /publications
-- name: Curriculum Vitae
-  url: /curriculum_vitae
+# - name: Curriculum Vitae
+#   url: /curriculum_vitae
 # - name: Showcase
 #   url: /showcase

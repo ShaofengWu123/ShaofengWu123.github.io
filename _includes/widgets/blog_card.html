@@ -1,0 +1,39 @@
+{% assign item = include.item %}
+{% assign hide_bottom_border = include.hide_bottom_border %}
+{% assign first = include.first %}
+{% assign last = include.last %}
+
+<div class="aero-blog-card{% unless hide_bottom_border %} aero-item-divider{% endunless %}">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mb-2">
+                <a href="{{ item.url | relative_url }}" class="aero-blog-title">
+                    {{ item.title }}
+                </a>
+            </h3>
+            <div class="text-muted small mb-2">
+                <i class="fas fa-calendar-alt"></i> {{ item.date | date: "%B %d, %Y" }}
+                {% if item.tags %}
+                    <span class="ml-3">
+                        <i class="fas fa-tags"></i>
+                        {% for tag in item.tags %}
+                            <span class="badge badge-light">{{ tag }}</span>
+                        {% endfor %}
+                    </span>
+                {% endif %}
+            </div>
+            <div class="text-muted small">
+                {% if item.excerpt %}
+                    {{ item.excerpt | strip_html | truncate: 500 }}
+                {% else %}
+                    {{ item.content | strip_html | truncate: 500 }}
+                {% endif %} 
+            </div>
+            <div class="mt-2">
+                <a href="{{ item.url | relative_url }}">
+                    Read more <span aria-hidden="true">›</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
