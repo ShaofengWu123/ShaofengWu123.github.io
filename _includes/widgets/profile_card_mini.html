@@ -17,4 +17,16 @@
             {% include widgets/profile_links.html %}
         </div>
     </section>
+
+    <section class="aero-panel aero-globe-card" aria-labelledby="visitor-globe-title">
+        <header class="aero-panel-title">
+            {% include aero/icon.html name='website' %}
+            <h2 id="visitor-globe-title">Visitor Globe</h2>
+        </header>
+        <div class="aero-panel-body aero-globe-body">
+            <div class="aero-globe-stage">
+                <script type="text/javascript" id="mmvst_globe" src="{{ '/assets/aero/globe/mmvst_globe.js' | relative_url }}?d=efYBc7wCfcupmxJThbMNbhMN4p6Keg8lWHHLICYrGp4&w=180&v=20261023_4"></script>
+            </div>
+        </div>
+    </section>
 </aside>

@@ -49,4 +49,54 @@
         }, { passive: true });
         window.addEventListener('resize', updateYear);
     }
+
+    var themeBtn = document.querySelector('[data-aero-theme-toggle]');
+    var themeLabel = document.querySelector('[data-aero-theme-label]');
+    var themeIcon = themeBtn ? themeBtn.querySelector('.aero-theme-icon') : null;
+
+    function syncThemeUI() {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (themeLabel) themeLabel.textContent = isDark ? 'Light Aero' : 'Dark Aero';
+        if (themeIcon) {
+            themeIcon.className = isDark ? 'fas fa-sun aero-theme-icon' : 'fas fa-moon aero-theme-icon';
+        }
+        if (themeBtn) {
+            themeBtn.setAttribute('aria-pressed', String(isDark));
+        }
+    }
+
+    if (themeBtn) {
+        syncThemeUI();
+        themeBtn.addEventListener('click', function () {
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            var next = isDark ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            try {
+                localStorage.setItem('aero-theme', next);
+            } catch (e) {}
+            syncThemeUI();
+        });
+    }
+
+    document.addEventListener('click', function (event) {
+        var toggle = event.target.closest('[data-authors-toggle]');
+        if (!toggle) return;
+        var container = toggle.closest('.aero-authors');
+        if (!container) return;
+        var extra = container.querySelector('[data-authors-extra]');
+        var dots = container.querySelector('[data-authors-dots]');
+        if (!extra) return;
+        var isHidden = extra.hasAttribute('hidden');
+        if (isHidden) {
+            extra.removeAttribute('hidden');
+            if (dots) dots.setAttribute('hidden', '');
+            toggle.setAttribute('aria-expanded', 'true');
+            toggle.textContent = toggle.getAttribute('data-less-label') || 'Collapse ▴';
+        } else {
+            extra.setAttribute('hidden', '');
+            if (dots) dots.removeAttribute('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.textContent = toggle.getAttribute('data-more-label') || 'Show more ▾';
+        }
+    });
 }());
