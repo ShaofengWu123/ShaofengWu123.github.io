@@ -72,18 +72,144 @@ img { max-width: 100%; }
     -webkit-backdrop-filter: blur(16px) saturate(1.2);
     backdrop-filter: blur(16px) saturate(1.2);
 }
-.aero-title-strip { display: flex; align-items: center; gap: 18px; min-height: 53px; padding: 8px 18px; }
+.aero-title-strip { display: flex; align-items: center; gap: 18px; min-height: 46px; padding: 6px 14px 6px 18px; }
 .aero-brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; font-size: 1.125rem; font-weight: 600; text-shadow: 0 1px 3px #133551; min-width: 0; }
 .aero-brand span { overflow-wrap: anywhere; }
 .aero-brand:hover { color: #fff; text-decoration: none; }
 .aero-brand:focus-visible { outline-color: #fff; }
 .aero-affiliation { margin-left: auto; color: #fff; font-size: 0.875rem; text-shadow: 0 1px 3px #173e57; }
-.aero-navigation { padding: 6px 10px; border-top: 1px solid rgba(255, 255, 255, 0.5); background: linear-gradient(#f2faff, #dcebf4 45%, #c5dbe9 48%, #e1edf5); }
+
+/* Windows 7 top-right recessed glass caption controls & theme capsule */
+.aero-title-controls {
+    margin-left: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: -6px;
+}
+.aero-glass-capsule {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 29px;
+    padding: 0 13px;
+    border: 1px solid rgba(5, 33, 55, 0.78);
+    border-top: 0;
+    border-radius: 0 0 6px 6px;
+    background:
+        linear-gradient(180deg,
+            rgba(220, 244, 255, 0.42) 0%,
+            rgba(126, 186, 224, 0.32) 48%,
+            rgba(24, 72, 108, 0.56) 51%,
+            rgba(64, 138, 186, 0.46) 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+        inset 1px 0 0 rgba(255, 255, 255, 0.32),
+        inset -1px 0 0 rgba(255, 255, 255, 0.32),
+        inset 0 -1px 0 rgba(190, 238, 255, 0.42),
+        0 1px 2px rgba(255, 255, 255, 0.22);
+    color: #f4fbff;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    font-family: inherit;
+    text-shadow: 0 1px 2px rgba(4, 24, 42, 0.9);
+    cursor: pointer;
+    transition: background 140ms, box-shadow 140ms, border-color 140ms;
+}
+.aero-glass-capsule:hover {
+    border-color: rgba(4, 28, 48, 0.88);
+    background:
+        linear-gradient(180deg,
+            rgba(238, 250, 255, 0.58) 0%,
+            rgba(148, 210, 246, 0.48) 48%,
+            rgba(32, 96, 142, 0.68) 51%,
+            rgba(86, 178, 232, 0.62) 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.78),
+        inset 0 0 8px rgba(120, 220, 255, 0.45),
+        0 0 10px rgba(72, 196, 255, 0.48);
+    color: #ffffff;
+}
+.aero-glass-capsule:focus-visible {
+    outline: 2px solid #9be2ff;
+    outline-offset: 2px;
+}
+.aero-window-controls {
+    display: inline-flex;
+    align-items: stretch;
+    height: 29px;
+    border: 1px solid rgba(5, 33, 55, 0.82);
+    border-top: 0;
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+    box-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.aero-win-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    color: rgba(245, 252, 255, 0.92);
+    background:
+        linear-gradient(180deg,
+            rgba(220, 244, 255, 0.38) 0%,
+            rgba(122, 182, 220, 0.28) 48%,
+            rgba(20, 66, 100, 0.52) 51%,
+            rgba(58, 128, 174, 0.42) 100%);
+    box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, 0.32),
+        inset 0 -1px 0 rgba(190, 238, 255, 0.36);
+    filter: drop-shadow(0 1px 1px rgba(4, 22, 38, 0.85));
+    transition: background 140ms, box-shadow 140ms;
+}
+.aero-win-btn + .aero-win-btn {
+    border-left: 1px solid rgba(6, 35, 58, 0.72);
+}
+.aero-win-btn:hover {
+    background:
+        linear-gradient(180deg,
+            rgba(240, 252, 255, 0.58) 0%,
+            rgba(146, 210, 248, 0.48) 48%,
+            rgba(30, 94, 140, 0.66) 51%,
+            rgba(88, 182, 236, 0.60) 100%);
+    box-shadow:
+        inset 0 0 6px rgba(150, 230, 255, 0.55),
+        inset 1px 0 0 rgba(255, 255, 255, 0.55);
+    color: #fff;
+}
+.aero-win-btn--close {
+    width: 44px;
+    background:
+        linear-gradient(180deg,
+            rgba(244, 166, 156, 0.68) 0%,
+            rgba(212, 92, 80, 0.66) 48%,
+            rgba(152, 30, 20, 0.82) 51%,
+            rgba(206, 78, 62, 0.76) 100%);
+    box-shadow:
+        inset 1px 0 0 rgba(255, 220, 215, 0.45),
+        inset 0 -1px 0 rgba(255, 190, 180, 0.42);
+}
+.aero-win-btn--close:hover {
+    background:
+        linear-gradient(180deg,
+            rgba(255, 192, 182, 0.86) 0%,
+            rgba(236, 106, 92, 0.84) 48%,
+            rgba(178, 34, 22, 0.92) 51%,
+            rgba(238, 96, 74, 0.90) 100%);
+    box-shadow:
+        inset 0 0 8px rgba(255, 220, 200, 0.65),
+        0 0 10px rgba(245, 92, 76, 0.55);
+}
+
+.aero-navigation { padding: 6px 10px; border-top: 1px solid rgba(255, 255, 255, 0.62); background: linear-gradient(180deg, #f6fcff 0%, #e1f0f8 46%, #c8dfee 49%, #e6f2fa 100%); box-shadow: inset 0 1px 0 #fff; }
 .aero-nav-links { display: flex; flex-wrap: wrap; gap: 5px; padding: 0; margin: 0; list-style: none; }
-.aero-nav-link { display: flex; align-items: center; gap: 7px; min-height: 40px; padding: 5px 14px; border: 1px solid transparent; border-radius: 5px; color: #254e68; font-size: 0.9375rem; text-shadow: 0 1px #fff; }
-.aero-nav-link:hover { background: linear-gradient(#fff, #d8edf9); border-color: #8eb8ce; color: #123d59; text-decoration: none; box-shadow: inset 0 1px #fff; }
-.aero-nav-link.active { background: linear-gradient(#fcfffa, #e9f6e6 45%, #cfe6c6 48%, #eff8e9); border-color: #88ad7e; color: #274b27; box-shadow: inset 0 1px #fff, 0 1px 2px rgba(40, 72, 50, 0.14); }
-.aero-header .aero-menu-button { display: none; margin-left: auto; }
+.aero-nav-link { display: flex; align-items: center; gap: 7px; min-height: 40px; padding: 5px 14px; border: 1px solid transparent; border-radius: 6px; color: #1f4b66; font-size: 0.9375rem; text-shadow: 0 1px #fff; transition: background 140ms, border-color 140ms, box-shadow 140ms; }
+.aero-nav-link:hover { background: linear-gradient(180deg, #ffffff 0%, #e6f7ff 48%, #c3e6fa 51%, #e8f8ff 100%); border-color: #6fb2d6; color: #0e3d59; text-decoration: none; box-shadow: inset 0 1px 0 #fff, inset 0 -2px 5px rgba(64, 182, 240, 0.25), 0 1px 3px rgba(14, 68, 102, 0.12); }
+.aero-nav-link.active { background: linear-gradient(180deg, #fdfffb 0%, #e5f8dc 48%, #c2e8b0 51%, #ebfae3 100%); border-color: #6ead59; color: #1f4a18; box-shadow: inset 0 1px 0 #fff, inset 0 -2px 5px rgba(96, 196, 68, 0.28), 0 1px 3px rgba(34, 78, 30, 0.16); }
+.aero-header .aero-menu-button { display: none; margin-top: 6px; }
 .aero-icon { flex-shrink: 0; width: 24px; height: 24px; object-fit: contain; vertical-align: middle; }
 .aero-icon--large { width: 48px; height: 48px; }
 .aero-brand .aero-icon { width: 30px; height: 30px; }
@@ -100,10 +226,56 @@ img { max-width: 100%; }
 .aero-title-link { margin-left: auto; flex-shrink: 0; font-size: 0.875rem; }
 .aero-subheading { color: #295875; font-size: 1rem; margin-bottom: 14px; }
 
-/* Buttons use a bevel and a central reflection rather than flat fills. */
-.aero-button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; max-width: 100%; min-height: 36px; padding: 5px 12px; border: 1px solid #8aaec2; border-radius: 5px; color: #1a5275; font-size: 0.875rem; font-family: inherit; line-height: 1.4; background: linear-gradient(#fff, #f2fafd 46%, #d4e7f2 49%, #eff9ff); box-shadow: inset 0 1px #fff, 0 1px 2px rgba(12, 60, 87, 0.1); text-shadow: 0 1px #fff; transition: border-color 140ms, box-shadow 140ms; }
-.aero-button:hover { color: #073d60; border-color: #4a9ac1; background: linear-gradient(#fff, #e3f6ff 46%, #bcdff3 49%, #e7f7ff); box-shadow: inset 0 1px #fff, 0 0 8px rgba(44, 155, 211, 0.28); text-decoration: none; }
-.aero-button:active { background: linear-gradient(#b7d4e5, #e1f2fc); box-shadow: inset 0 1px 3px rgba(14, 71, 104, 0.22); }
+/* Aqua / Gel buttons with 50% specular horizon and bottom cyan inner glow. */
+.aero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    max-width: 100%;
+    min-height: 36px;
+    padding: 5px 13px;
+    border: 1px solid #72adc9;
+    border-radius: 6px;
+    color: #124c6e;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: 1.4;
+    background:
+        linear-gradient(180deg,
+            #ffffff 0%,
+            #ebf9ff 47%,
+            #c6e6f7 50%,
+            #ddf3ff 85%,
+            #eefaff 100%);
+    box-shadow:
+        inset 0 1px 0 #ffffff,
+        inset 0 -2px 5px rgba(72, 186, 242, 0.26),
+        0 1px 3px rgba(12, 60, 87, 0.14);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.92);
+    transition: border-color 140ms, box-shadow 140ms, background 140ms, transform 120ms;
+}
+.aero-button:hover {
+    color: #063958;
+    border-color: #3996c4;
+    background:
+        linear-gradient(180deg,
+            #ffffff 0%,
+            #def5ff 47%,
+            #aee0fa 50%,
+            #cef0ff 85%,
+            #e8f9ff 100%);
+    box-shadow:
+        inset 0 1px 0 #ffffff,
+        inset 0 -2px 6px rgba(42, 184, 248, 0.42),
+        0 0 10px rgba(44, 162, 224, 0.36);
+    text-decoration: none;
+}
+.aero-button:active {
+    background: linear-gradient(180deg, #b3daf0 0%, #ddf3ff 100%);
+    box-shadow: inset 0 1px 3px rgba(14, 71, 104, 0.25);
+}
 .aero-button .aero-icon { width: 19px; height: 19px; }
 .aero-button span { min-width: 0; overflow-wrap: anywhere; }
 .aero-button i { width: 19px; text-align: center; }
@@ -156,17 +328,78 @@ img { max-width: 100%; }
 .aero-author strong { font-weight: 600; color: #13364e; }
 a.aero-author:hover { color: var(--aero-link); }
 .aero-author-note, .aero-authors mark { display: inline-block; margin-left: 4px; padding: 0 6px; border-radius: 4px; font-size: 0.8125rem; color: #3b5f78; background: rgba(210, 232, 246, 0.55); border: 1px solid rgba(154, 192, 216, 0.5); }
-.aero-authors-toggle { display: inline-flex; align-items: center; margin-left: 6px; padding: 1px 8px; border: 1px solid #8eb8d2; border-radius: 999px; background: linear-gradient(#f7fcff, #d9eef9); color: #1b567a; font-size: 0.78rem; font-family: inherit; line-height: 1.4; cursor: pointer; box-shadow: inset 0 1px #fff; vertical-align: baseline; }
-.aero-authors-toggle:hover { border-color: #4f9bc4; background: linear-gradient(#fff, #c7e7f9); color: #0d3f5e; }
+.aero-authors-toggle {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+    padding: 1px 9px;
+    border: 1px solid #6cb2d8;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #ffffff 0%, #e4f6ff 47%, #bbe4fa 51%, #ddf4ff 100%);
+    color: #0e4a6f;
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: 1.45;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 #fff, inset 0 -1px 3px rgba(56, 178, 240, 0.25), 0 1px 2px rgba(12, 60, 88, 0.12);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.88);
+    vertical-align: baseline;
+    transition: border-color 140ms, box-shadow 140ms, background 140ms;
+}
+.aero-authors-toggle:hover {
+    border-color: #3692c4;
+    background: linear-gradient(180deg, #ffffff 0%, #d6f1ff 47%, #a4daf8 51%, #d1f0ff 100%);
+    color: #063552;
+    box-shadow: inset 0 1px 0 #fff, 0 0 8px rgba(48, 170, 236, 0.36);
+}
 .aero-venue { font-size: 0.875rem; margin: 0 0 10px; }
 .aero-abstract { color: #4b6373; font-size: 0.875rem; line-height: 1.65; }
 .aero-publication-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
-.badge-publication { font-size: 0.8125rem; }
-.badge-success { color: #245323; background: linear-gradient(#e8f6d8, #c4e4ae); border: 1px solid #86b371; }
-.badge-light { color: #31536a; background: linear-gradient(#f4faff, #dcebf5); border: 1px solid #b9cede; font-weight: 400; }
-.badge-conference { color: #16496b; background: linear-gradient(#f0f9ff, #cbe5f6); border: 1px solid #8ab8d4; margin-right: 4px; font-weight: 500; }
-.badge-preprint, .badge-workshop, .badge-network, .badge-system, .badge-dataplane { color: #31536a; background: linear-gradient(#f4faff, #dcebf5); border: 1px solid #b9cede; margin-right: 4px; font-weight: 400; }
-.badge-award { color: #245323; background: linear-gradient(#e8f6d8, #c4e4ae); border: 1px solid #86b371; margin-right: 4px; font-weight: 600; }
+.badge-publication,
+.aero-venue .badge {
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    line-height: 1.25;
+    vertical-align: baseline;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94), inset 0 -1px 3px rgba(40, 152, 214, 0.22), 0 1px 2px rgba(14, 58, 86, 0.12);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.88);
+}
+.badge-success,
+.badge-award {
+    color: #1b4d12;
+    background: linear-gradient(180deg, #fbfff6 0%, #def8c6 47%, #b8ea90 51%, #dcf7be 100%);
+    border: 1px solid #6eb447;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 3px rgba(88, 188, 42, 0.28), 0 1px 2px rgba(28, 76, 18, 0.14);
+}
+.badge-award { margin-right: 5px; font-weight: 600; }
+.badge-conference {
+    color: #0d4568;
+    background: linear-gradient(180deg, #ffffff 0%, #dbf2fe 47%, #b1def8 51%, #d6f0fe 100%);
+    border: 1px solid #67add6;
+    margin-right: 5px;
+    font-weight: 600;
+}
+.badge-network,
+.badge-system,
+.badge-dataplane {
+    color: #114e4a;
+    background: linear-gradient(180deg, #f9fffe 0%, #d6f6f1 47%, #b0e8df 51%, #daf9f4 100%);
+    border: 1px solid #66b8ad;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 3px rgba(44, 178, 162, 0.24), 0 1px 2px rgba(14, 66, 60, 0.12);
+    margin-right: 5px;
+    font-weight: 500;
+}
+.badge-preprint,
+.badge-workshop,
+.badge-light {
+    color: #264a62;
+    background: linear-gradient(180deg, #ffffff 0%, #e4f0f8 47%, #c7ddec 51%, #e8f3fa 100%);
+    border: 1px solid #89aec6;
+    margin-right: 5px;
+    font-weight: 500;
+}
 
 .aero-archive-layout { display: grid; grid-template-columns: minmax(0, 1fr) 144px; gap: 22px; }
 .aero-archive-main, .aero-archive-sidebar { min-width: 0; }
@@ -280,9 +513,7 @@ img.lazy, div.lazy { background-image: url('images/loading.gif'); background-rep
 }
 
 /* Theme toggle & Dark Aero mode (card + typography tinting) */
-.aero-nav-spacer { margin-left: auto; }
-.aero-theme-toggle { background: transparent; cursor: pointer; font-family: inherit; }
-.aero-theme-icon { font-size: 0.95rem; color: #2b6388; width: 18px; text-align: center; }
+.aero-theme-icon { font-size: 0.9rem; color: #ffe484; width: 16px; text-align: center; filter: drop-shadow(0 1px 1px rgba(0, 18, 36, 0.75)); }
 
 html[data-theme="dark"] {
     --aero-ink: #e2eff8;
@@ -317,15 +548,17 @@ html[data-theme="dark"] .mark {
     padding: 0 6px;
 }
 html[data-theme="dark"] .aero-authors-toggle {
-    border-color: rgba(110, 184, 230, 0.42);
-    background: linear-gradient(to bottom, rgba(46, 92, 128, 0.78), rgba(22, 52, 78, 0.88));
-    color: #d6effe;
-    box-shadow: inset 0 1px rgba(185, 232, 255, 0.22);
+    border-color: rgba(110, 194, 244, 0.52);
+    background: linear-gradient(180deg, rgba(72, 138, 186, 0.86) 0%, rgba(36, 84, 122, 0.90) 48%, rgba(20, 52, 82, 0.96) 51%, rgba(30, 74, 110, 0.92) 100%);
+    color: #e4f5ff;
+    text-shadow: 0 1px 2px rgba(0, 14, 28, 0.85);
+    box-shadow: inset 0 1px 0 rgba(210, 245, 255, 0.35), inset 0 -1px 3px rgba(56, 182, 248, 0.25);
 }
 html[data-theme="dark"] .aero-authors-toggle:hover {
-    border-color: rgba(145, 215, 255, 0.68);
-    background: linear-gradient(to bottom, rgba(64, 122, 166, 0.88), rgba(30, 70, 104, 0.94));
+    border-color: rgba(150, 222, 255, 0.78);
+    background: linear-gradient(180deg, rgba(92, 166, 218, 0.92) 0%, rgba(46, 104, 148, 0.94) 48%, rgba(26, 66, 102, 0.98) 51%, rgba(40, 92, 134, 0.95) 100%);
     color: #fff;
+    box-shadow: inset 0 1px 0 rgba(225, 250, 255, 0.48), 0 0 8px rgba(64, 190, 255, 0.38);
 }
 html[data-theme="dark"] .aero-back-link {
     border-color: rgba(116, 188, 232, 0.45);
@@ -336,22 +569,23 @@ html[data-theme="dark"] .aero-error-number { color: #84cef8; }
 html[data-theme="dark"] .aero-navigation {
     border-top-color: rgba(140, 210, 250, 0.28);
     background: linear-gradient(to bottom, rgba(38, 76, 108, 0.88), rgba(22, 50, 76, 0.92) 46%, rgba(14, 36, 56, 0.96) 49%, rgba(20, 48, 72, 0.93));
+    box-shadow: inset 0 1px 0 rgba(190, 235, 255, 0.2);
 }
 html[data-theme="dark"] .aero-nav-link {
     color: #d8eefb;
     text-shadow: 0 1px 2px rgba(0, 14, 28, 0.85);
 }
 html[data-theme="dark"] .aero-nav-link:hover {
-    background: linear-gradient(to bottom, rgba(72, 134, 178, 0.72), rgba(34, 78, 114, 0.84));
-    border-color: rgba(130, 204, 248, 0.5);
+    background: linear-gradient(to bottom, rgba(72, 134, 178, 0.78), rgba(38, 86, 124, 0.88) 48%, rgba(22, 56, 86, 0.94) 51%, rgba(32, 76, 112, 0.9));
+    border-color: rgba(130, 204, 248, 0.55);
     color: #fff;
-    box-shadow: inset 0 1px rgba(200, 240, 255, 0.35);
+    box-shadow: inset 0 1px rgba(205, 242, 255, 0.38), inset 0 -2px 5px rgba(56, 184, 248, 0.24);
 }
 html[data-theme="dark"] .aero-nav-link.active {
-    background: linear-gradient(to bottom, rgba(58, 118, 86, 0.82), rgba(34, 82, 56, 0.9) 46%, rgba(22, 60, 40, 0.94) 49%, rgba(30, 74, 50, 0.9));
-    border-color: rgba(120, 206, 145, 0.55);
+    background: linear-gradient(to bottom, rgba(64, 132, 96, 0.86), rgba(36, 88, 60, 0.92) 48%, rgba(22, 62, 40, 0.96) 51%, rgba(32, 80, 54, 0.92));
+    border-color: rgba(126, 214, 152, 0.6);
     color: #eaffef;
-    box-shadow: inset 0 1px rgba(210, 255, 220, 0.32), 0 1px 3px rgba(0, 18, 10, 0.35);
+    box-shadow: inset 0 1px rgba(215, 255, 225, 0.38), inset 0 -2px 5px rgba(72, 210, 118, 0.26), 0 1px 3px rgba(0, 18, 10, 0.35);
 }
 html[data-theme="dark"] .aero-theme-icon { color: #ffd970; }
 html[data-theme="dark"] .aero-panel {
@@ -388,37 +622,53 @@ html[data-theme="dark"] .aero-globe-body {
     background: radial-gradient(circle at 50% 42%, rgba(72, 168, 230, 0.24), rgba(11, 29, 46, 0.82));
 }
 html[data-theme="dark"] .aero-button {
-    border-color: rgba(116, 188, 232, 0.45);
-    color: #e4f4ff;
-    background: linear-gradient(to bottom, rgba(64, 118, 158, 0.82), rgba(32, 73, 106, 0.90) 46%, rgba(19, 49, 76, 0.95) 49%, rgba(28, 66, 97, 0.92));
-    box-shadow: inset 0 1px rgba(190, 235, 255, 0.28), 0 1px 3px rgba(0, 12, 26, 0.35);
+    border-color: rgba(116, 192, 238, 0.52);
+    color: #e8f6ff;
+    background: linear-gradient(180deg, rgba(74, 134, 178, 0.86) 0%, rgba(36, 80, 116, 0.92) 47%, rgba(18, 48, 76, 0.96) 50%, rgba(30, 72, 106, 0.94) 100%);
+    box-shadow: inset 0 1px 0 rgba(205, 242, 255, 0.38), inset 0 -2px 5px rgba(56, 184, 248, 0.24), 0 1px 3px rgba(0, 12, 26, 0.38);
     text-shadow: 0 1px 2px rgba(0, 15, 30, 0.85);
 }
 html[data-theme="dark"] .aero-button:hover {
     color: #fff;
-    border-color: rgba(145, 215, 255, 0.72);
-    background: linear-gradient(to bottom, rgba(82, 146, 192, 0.88), rgba(42, 92, 132, 0.94) 46%, rgba(24, 62, 96, 0.96) 49%, rgba(36, 84, 122, 0.94));
-    box-shadow: inset 0 1px rgba(215, 245, 255, 0.42), 0 0 10px rgba(72, 188, 255, 0.36);
+    border-color: rgba(150, 220, 255, 0.78);
+    background: linear-gradient(180deg, rgba(94, 164, 214, 0.92) 0%, rgba(46, 100, 142, 0.95) 47%, rgba(24, 62, 96, 0.98) 50%, rgba(40, 92, 134, 0.95) 100%);
+    box-shadow: inset 0 1px 0 rgba(225, 248, 255, 0.5), inset 0 -2px 6px rgba(64, 198, 255, 0.38), 0 0 10px rgba(72, 188, 255, 0.4);
 }
 html[data-theme="dark"] .aero-button:active {
     background: linear-gradient(rgba(18, 46, 72, 0.95), rgba(32, 73, 106, 0.92));
 }
-html[data-theme="dark"] .badge-conference,
-html[data-theme="dark"] .badge-preprint,
-html[data-theme="dark"] .badge-workshop,
+html[data-theme="dark"] .badge-conference {
+    color: #e4f6ff;
+    background: linear-gradient(180deg, rgba(66, 134, 184, 0.88) 0%, rgba(34, 82, 120, 0.92) 48%, rgba(18, 52, 82, 0.96) 51%, rgba(28, 72, 108, 0.94) 100%);
+    border-color: rgba(120, 198, 246, 0.56);
+    box-shadow: inset 0 1px 0 rgba(205, 242, 255, 0.38), inset 0 -1px 3px rgba(56, 184, 248, 0.25), 0 1px 2px rgba(0, 12, 24, 0.35);
+    text-shadow: 0 1px 2px rgba(0, 14, 28, 0.85);
+}
 html[data-theme="dark"] .badge-network,
 html[data-theme="dark"] .badge-system,
-html[data-theme="dark"] .badge-dataplane,
+html[data-theme="dark"] .badge-dataplane {
+    color: #defcf9;
+    background: linear-gradient(180deg, rgba(52, 132, 128, 0.86) 0%, rgba(26, 80, 78, 0.92) 48%, rgba(14, 52, 52, 0.96) 51%, rgba(22, 70, 68, 0.94) 100%);
+    border-color: rgba(106, 206, 196, 0.52);
+    box-shadow: inset 0 1px 0 rgba(200, 252, 246, 0.35), inset 0 -1px 3px rgba(48, 196, 182, 0.24), 0 1px 2px rgba(0, 14, 14, 0.35);
+    text-shadow: 0 1px 2px rgba(0, 16, 16, 0.85);
+}
+html[data-theme="dark"] .badge-preprint,
+html[data-theme="dark"] .badge-workshop,
 html[data-theme="dark"] .badge-light {
-    color: #d8f0ff;
-    background: linear-gradient(rgba(40, 88, 124, 0.86), rgba(22, 54, 82, 0.92));
-    border-color: rgba(112, 186, 232, 0.45);
+    color: #dceffc;
+    background: linear-gradient(180deg, rgba(58, 104, 138, 0.84) 0%, rgba(30, 64, 92, 0.90) 48%, rgba(18, 44, 66, 0.95) 51%, rgba(26, 58, 84, 0.92) 100%);
+    border-color: rgba(112, 178, 220, 0.46);
+    box-shadow: inset 0 1px 0 rgba(195, 235, 255, 0.3), 0 1px 2px rgba(0, 12, 24, 0.32);
+    text-shadow: 0 1px 2px rgba(0, 14, 28, 0.85);
 }
 html[data-theme="dark"] .badge-award,
 html[data-theme="dark"] .badge-success {
-    color: #dcffe2;
-    background: linear-gradient(rgba(38, 96, 56, 0.86), rgba(22, 60, 36, 0.92));
-    border-color: rgba(116, 206, 136, 0.52);
+    color: #e4ffe8;
+    background: linear-gradient(180deg, rgba(62, 138, 78, 0.88) 0%, rgba(34, 88, 46, 0.92) 48%, rgba(20, 60, 30, 0.96) 51%, rgba(28, 78, 40, 0.94) 100%);
+    border-color: rgba(124, 214, 140, 0.58);
+    box-shadow: inset 0 1px 0 rgba(215, 255, 222, 0.38), inset 0 -1px 3px rgba(72, 206, 104, 0.28), 0 1px 2px rgba(0, 16, 8, 0.35);
+    text-shadow: 0 1px 2px rgba(0, 16, 8, 0.85);
 }
 html[data-theme="dark"] .aero-year-link.active {
     border-color: rgba(120, 194, 240, 0.5);
